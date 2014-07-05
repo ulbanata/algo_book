@@ -1,0 +1,804 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../manifest.appcache">
+    
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        
+        <meta charset="UTF-8">
+        <title>The Fibonacci Sequence and Recursion | Algorithms for Web Devs</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="">
+        <meta name="description" content="Ah, algorithms. A dirty word in web development. The mere mention of the word makes some programmers cower in fear. For those of you without a technical background, you might instantly think “MATH! Anything but math!”. If you’ve heard about Google, you’ve probably heard someone talk about the “Google Search Algorithm”. But the word shouldn’t scare you. It has been built up over the years as something to be feared, to be complicated, to be strictly mathematical. But that’s not what it means at all. Algorithms are, at their core, the steps taken to solve a problem. A course on algorithms would be better titled “Programming Problem Solving.”">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../recursion/recursion_isnt_always_the_answer_part_ii.html" />
+        
+        
+        <link rel="prev" href="../recursion/recursion_isnt_always_the_answer.html" />
+        
+
+        <meta property="og:title" content="The Fibonacci Sequence and Recursion | Algorithms for Web Devs">
+        <meta property="og:site_name" content="Algorithms for Web Devs">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+        
+    </head>
+    <body>
+        
+        
+
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+
+
+        
+    <div class="book"  data-level="5.2.1" data-basepath=".." data-revision="1401907660337">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    
+    <a href="https://github.com/null" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >Algorithms for Web Devs</a>
+    </h1>
+</div>
+
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+
+        
+
+        
+
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+    
+        <li class="chapter " data-level="1" data-path="problem_solving/README.html">
+            
+            <a href="../problem_solving/README.html">
+                <i class="fa fa-check"></i> <b>1.</b> Problem Solving
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="what_happens_when_you_run_code/README.html">
+            
+            <a href="../what_happens_when_you_run_code/README.html">
+                <i class="fa fa-check"></i> <b>2.</b> What happens when you run code?
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="big_o_notation/README.html">
+            
+            <a href="../big_o_notation/README.html">
+                <i class="fa fa-check"></i> <b>3.</b> Big O Notation
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="data_structures/README.html">
+            
+            <a href="../data_structures/README.html">
+                <i class="fa fa-check"></i> <b>4.</b> Data Structures
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="data_structures/arrays.html">
+            
+            <a href="../data_structures/arrays.html">
+                <i class="fa fa-check"></i> <b>4.1.</b> Arrays
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="data_structures/queues_and_stacks.html">
+            
+            <a href="../data_structures/queues_and_stacks.html">
+                <i class="fa fa-check"></i> <b>4.2.</b> Stacks and Queues
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="data_structures/linked_lists.html">
+            
+            <a href="../data_structures/linked_lists.html">
+                <i class="fa fa-check"></i> <b>4.3.</b> Linked Lists
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="data_structures/hashes.html">
+            
+            <a href="../data_structures/hashes.html">
+                <i class="fa fa-check"></i> <b>4.4.</b> Hashes
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="data_structures/trees.html">
+            
+            <a href="../data_structures/trees.html">
+                <i class="fa fa-check"></i> <b>4.5.</b> Trees
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="data_structures/graphs.html">
+            
+            <a href="../data_structures/graphs.html">
+                <i class="fa fa-check"></i> <b>4.6.</b> Graphs
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="recursion/README.html">
+            
+            <a href="../recursion/README.html">
+                <i class="fa fa-check"></i> <b>5.</b> Recursion
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="recursion/how_to_think_recursively.html">
+            
+            <a href="../recursion/how_to_think_recursively.html">
+                <i class="fa fa-check"></i> <b>5.1.</b> How to Think Recursively
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="recursion/recursion_isnt_always_the_answer.html">
+            
+            <a href="../recursion/recursion_isnt_always_the_answer.html">
+                <i class="fa fa-check"></i> <b>5.2.</b> Recursion isn&#39;t always the answer!
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="recursion/the_fibonacci_sequence.html">
+            
+            <a href="../recursion/the_fibonacci_sequence.html">
+                <i class="fa fa-check"></i> <b>5.2.1.</b> The Fibonacci Sequence and Recursion
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="recursion/recursion_isnt_always_the_answer_part_ii.html">
+            
+            <a href="../recursion/recursion_isnt_always_the_answer_part_ii.html">
+                <i class="fa fa-check"></i> <b>5.2.2.</b> Stack Level Too Deep!
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="recursion/caching.html">
+            
+            <a href="../recursion/caching.html">
+                <i class="fa fa-check"></i> <b>6.</b> Caching
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="sorting_algorithms/README.html">
+            
+            <a href="../sorting_algorithms/README.html">
+                <i class="fa fa-check"></i> <b>7.</b> Sorting Algorithms
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="sorting_algorithms/selection_sort.html">
+            
+            <a href="../sorting_algorithms/selection_sort.html">
+                <i class="fa fa-check"></i> <b>7.1.</b> Selection Sort
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="sorting_algorithms/insertion_sort.html">
+            
+            <a href="../sorting_algorithms/insertion_sort.html">
+                <i class="fa fa-check"></i> <b>7.2.</b> Insertion Sort
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="sorting_algorithms/bubble_sort.html">
+            
+            <a href="../sorting_algorithms/bubble_sort.html">
+                <i class="fa fa-check"></i> <b>7.3.</b> Bubble Sort
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="sorting_algorithms/merge_sort.html">
+            
+            <a href="../sorting_algorithms/merge_sort.html">
+                <i class="fa fa-check"></i> <b>7.4.</b> Merge Sort
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="sorting_algorithms/quick_sort.html">
+            
+            <a href="../sorting_algorithms/quick_sort.html">
+                <i class="fa fa-check"></i> <b>7.5.</b> Quick Sort
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="sorting_algorithms/radix_sort.html">
+            
+            <a href="../sorting_algorithms/radix_sort.html">
+                <i class="fa fa-check"></i> <b>7.6.</b> Radix Sort
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="array_algorithms/README.html">
+            
+            <a href="../array_algorithms/README.html">
+                <i class="fa fa-check"></i> <b>8.</b> Array Algorithms
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="tree_algorithms/README.html">
+            
+            <a href="../tree_algorithms/README.html">
+                <i class="fa fa-check"></i> <b>9.</b> Tree Algorithms
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="graph_algorithms/README.html">
+            
+            <a href="../graph_algorithms/README.html">
+                <i class="fa fa-check"></i> <b>10.</b> Graph Algorithms
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="p_vs_np/README.html">
+            
+            <a href="../p_vs_np/README.html">
+                <i class="fa fa-check"></i> <b>11.</b> P vs. NP
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="string_algorithms/README.html">
+            
+            <a href="../string_algorithms/README.html">
+                <i class="fa fa-check"></i> <b>12.</b> String Algorithms
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="other_algorithms/README.html">
+            
+            <a href="../other_algorithms/README.html">
+                <i class="fa fa-check"></i> <b>13.</b> Other Algorithms
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="interviewing/README.html">
+            
+            <a href="../interviewing/README.html">
+                <i class="fa fa-check"></i> <b>14.</b> Interviewing
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="14.1" data-path="interviewing/bitly_clone.html">
+            
+            <a href="../interviewing/bitly_clone.html">
+                <i class="fa fa-check"></i> <b>14.1.</b> bit.ly clone
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="languages_overview/README.html">
+            
+            <a href="../languages_overview/README.html">
+                <i class="fa fa-check"></i> <b>15.</b> Languages Overview
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16" data-path="framework_resources/README.html">
+            
+            <a href="../framework_resources/README.html">
+                <i class="fa fa-check"></i> <b>16.</b> Framework Resources
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="17" data-path="learning_resources/README.html">
+            
+            <a href="../learning_resources/README.html">
+                <i class="fa fa-check"></i> <b>17.</b> Learning Resources
+            </a>
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 41.1764705882353%;min-width: 38.23529411764706%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../problem_solving/README.html" title="Problem Solving" class="chapter done new-chapter" data-progress="1" style="left: 2.9411764705882355%;"></a>
+    
+        <a href="../what_happens_when_you_run_code/README.html" title="What happens when you run code?" class="chapter done new-chapter" data-progress="2" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../big_o_notation/README.html" title="Big O Notation" class="chapter done new-chapter" data-progress="3" style="left: 8.823529411764707%;"></a>
+    
+        <a href="../data_structures/README.html" title="Data Structures" class="chapter done new-chapter" data-progress="4" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../data_structures/arrays.html" title="Arrays" class="chapter done " data-progress="4.1" style="left: 14.705882352941176%;"></a>
+    
+        <a href="../data_structures/queues_and_stacks.html" title="Stacks and Queues" class="chapter done " data-progress="4.2" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../data_structures/linked_lists.html" title="Linked Lists" class="chapter done " data-progress="4.3" style="left: 20.58823529411765%;"></a>
+    
+        <a href="../data_structures/hashes.html" title="Hashes" class="chapter done " data-progress="4.4" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../data_structures/trees.html" title="Trees" class="chapter done " data-progress="4.5" style="left: 26.470588235294116%;"></a>
+    
+        <a href="../data_structures/graphs.html" title="Graphs" class="chapter done " data-progress="4.6" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../recursion/README.html" title="Recursion" class="chapter done new-chapter" data-progress="5" style="left: 32.35294117647059%;"></a>
+    
+        <a href="../recursion/how_to_think_recursively.html" title="How to Think Recursively" class="chapter done " data-progress="5.1" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../recursion/recursion_isnt_always_the_answer.html" title="Recursion isn&#39;t always the answer!" class="chapter done " data-progress="5.2" style="left: 38.23529411764706%;"></a>
+    
+        <a href="../recursion/the_fibonacci_sequence.html" title="The Fibonacci Sequence and Recursion" class="chapter done " data-progress="5.2.1" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../recursion/recursion_isnt_always_the_answer_part_ii.html" title="Stack Level Too Deep!" class="chapter  " data-progress="5.2.2" style="left: 44.11764705882353%;"></a>
+    
+        <a href="../recursion/caching.html" title="Caching" class="chapter  new-chapter" data-progress="6" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../sorting_algorithms/README.html" title="Sorting Algorithms" class="chapter  new-chapter" data-progress="7" style="left: 50%;"></a>
+    
+        <a href="../sorting_algorithms/selection_sort.html" title="Selection Sort" class="chapter  " data-progress="7.1" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../sorting_algorithms/insertion_sort.html" title="Insertion Sort" class="chapter  " data-progress="7.2" style="left: 55.88235294117647%;"></a>
+    
+        <a href="../sorting_algorithms/bubble_sort.html" title="Bubble Sort" class="chapter  " data-progress="7.3" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../sorting_algorithms/merge_sort.html" title="Merge Sort" class="chapter  " data-progress="7.4" style="left: 61.76470588235294%;"></a>
+    
+        <a href="../sorting_algorithms/quick_sort.html" title="Quick Sort" class="chapter  " data-progress="7.5" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../sorting_algorithms/radix_sort.html" title="Radix Sort" class="chapter  " data-progress="7.6" style="left: 67.6470588235294%;"></a>
+    
+        <a href="../array_algorithms/README.html" title="Array Algorithms" class="chapter  new-chapter" data-progress="8" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../tree_algorithms/README.html" title="Tree Algorithms" class="chapter  new-chapter" data-progress="9" style="left: 73.52941176470588%;"></a>
+    
+        <a href="../graph_algorithms/README.html" title="Graph Algorithms" class="chapter  " data-progress="10" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../p_vs_np/README.html" title="P vs. NP" class="chapter  " data-progress="11" style="left: 79.41176470588235%;"></a>
+    
+        <a href="../string_algorithms/README.html" title="String Algorithms" class="chapter  " data-progress="12" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../other_algorithms/README.html" title="Other Algorithms" class="chapter  " data-progress="13" style="left: 85.29411764705883%;"></a>
+    
+        <a href="../interviewing/README.html" title="Interviewing" class="chapter  " data-progress="14" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../interviewing/bitly_clone.html" title="bit.ly clone" class="chapter  " data-progress="14.1" style="left: 91.17647058823529%;"></a>
+    
+        <a href="../languages_overview/README.html" title="Languages Overview" class="chapter  " data-progress="15" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../framework_resources/README.html" title="Framework Resources" class="chapter  " data-progress="16" style="left: 97.05882352941177%;"></a>
+    
+        <a href="../learning_resources/README.html" title="Learning Resources" class="chapter  " data-progress="17" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_9713">
+                    
+                        <h1 id="the-fibonacci-sequence-and-recursion-a-cautionary-tale">The Fibonacci Sequence and Recursion - A Cautionary Tale</h1>
+<p>First, let&#39;s recap what the Fibonacci sequence is:</p>
+<p>The Fibonacci sequence is 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...
+The nth Fibonacci number is the nth number in the sequence. For example, the 4th number (for n = 4) is 3. The 7th number is 13. The 11th number is 89. In order to get the nth number in the sequence, you add up the two preceding numbers in the sequence, n-1 and n-2. So, to get the 12th number in the sequence, we add together the 11th number and the 10th number. This results in 55 + 89 = 144. The first two numbers (the &quot;seed&quot; numbers) are 1 and 1 (Or, in some cases, 0 and 1). Below is a table of the Fibonacci sequence, showing the relationships. You can find out more about the <a href="http://en.wikipedia.org/wiki/Fibonacci_number" target="_blank">Fibonacci sequence here</a>.</p>
+<table>
+    <tr>
+        <th>nth #</th>
+        <th>Fib #</th>
+        <th>n-1 + n-2 to get Fib #</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>N/A (Seed Number)</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>1</td>
+        <td>N/A (Seed Number)</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>2</td>
+        <td>1 + 1 (2nd Fib # + 1st Fib #)</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>3</td>
+        <td>2 + 1 (3rd Fib # + 2nd Fib #)</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>5</td>
+        <td>3 + 2 (4th Fib # + 3rd Fib #)</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>8</td>
+        <td>5 + 3 (5th Fib # + 4th Fib #)</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>13</td>
+        <td>8 + 5 (6th Fib # + 5th Fib #)</td>
+    </tr>
+        <tr>
+        <td>8</td>
+        <td>21</td>
+        <td>13 + 8 (7th Fib # + 6th Fib #)</td>
+    </tr>
+        <tr>
+        <td>9</td>
+        <td>34</td>
+        <td>21 + 13 (8th Fib # + 7th Fib #)</td>
+    </tr>
+        <tr>
+        <td>10</td>
+        <td>55</td>
+        <td>34 + 21 (9th Fib # + 8th Fib #)</td>
+    </tr>
+        <tr>
+        <td>11</td>
+        <td>89</td>
+        <td>55 + 34 (10th Fib # + 9th Fib #)</td>
+    </tr>
+</table>
+
+<p>What algorithm could we write to return the nth Fibonacci number? We have two seed numbers, 1 and 1. Let&#39;s start with them.</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>fib(n)
+seed_a = <span class="hljs-number">1</span>
+seed_b = <span class="hljs-number">1</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Now, in order to get the 3rd Fibonacci number, we can just add <code>seed_a</code> and <code>seed_b</code> together. But right now we can&#39;t go higher than that. If we look at the table above, we can start to see a pattern on how to get a Fibonacci number. If we start from the bottom, with 1 and 1, we can loop through all the Fibonacci numbers to the number we need. Let&#39;s add that in.</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>fib(n)
+    seed_a = <span class="hljs-number">1</span>
+    seed_b = <span class="hljs-number">1</span>
+    (<span class="hljs-number">3</span>..n).each <span class="hljs-keyword">do</span> |nth_number|
+        seed_b, seed_a = seed_b + seed_a, seed_b
+    <span class="hljs-keyword">end</span>
+    seed_b
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Ruby Note: The <code>seed_b, seed_a = seed_b + seed_a, seed_b</code> line above is the <a href="http://nathanhoad.net/ruby-multiple-assignment" target="_blank">Ruby Multiple Assignment</a>. It is doing the same thing as</p>
+<pre><code class="lang-ruby">holder = seed_b
+seed_b = seed_b + seed_a
+seed_a = holder
+</code></pre>
+<p>Finally, we add in the edge cases of the 1st or 2nd number being inputted. (We are assuming only positive integers can be inputted)</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>fib(n)
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> <span class="hljs-keyword">if</span> n &lt;= <span class="hljs-number">2</span>
+    seed_a = <span class="hljs-number">1</span>
+    seed_b = <span class="hljs-number">1</span>
+    (<span class="hljs-number">3</span>..n).each <span class="hljs-keyword">do</span> |nth_number|
+        seed_b, seed_a = seed_b + seed_a, seed_b
+    <span class="hljs-keyword">end</span>
+    seed_b
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>We have a working algorithm that will return the nth Fibonacci number! Though it looks messy. Let&#39;s see what would happen if we used recursion to rewrite it:</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>rec_fib(n)
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> <span class="hljs-keyword">if</span> n &lt;= <span class="hljs-number">2</span>
+    rec_fib(n - <span class="hljs-number">1</span>) + rec_fib(n - <span class="hljs-number">2</span>)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>That looks much cleaner! The recursive solution for the fibonacci number is only 4 lines compared to the 9 lines we need for the iterative solution. Line 2 contains the base case and line 3 contains the recursive case. Why would we not use this?</p>
+<p>For those adventurous souls that want to see what happens when we use the two different methods, try tossing them into your console. First run the iterative solution for 10, 50, 100, 1000 and 10000. Notice how fast the program runs? Now try it with the recursive solution. If your console freezes while running, you should be able to use ctrl + c to kick it out of the code it is currently executing.</p>
+<p>Unless you&#39;re on a supercomputer, running <code>rec_fib(50)</code> probably took a long time. Why? The problem it&#39;s solving is the same as the recursive solution, but running <code>fib(50)</code> seems almost instantaneous! Why does the recursive solution take so long?</p>
+<p>To solve this problem, let&#39;s take a look at what is happening for small nth Fibonacci numbers. For the 1st and 2nd Fibonacci numbers, the method returns <code>1</code> on the first line. No recursive calls are made. For the 3rd fibonacci number, it makes the recursive call. It runs <code>rec_fib(2)</code> and <code>rec_fib(1)</code>, which returns <code>1</code> without any recursive calls. The problem still isn&#39;t visible.</p>
+<p><img src="" alt="Image goes here"></p>
+<p>So what happens when we run <code>rec_fib(4)</code>? We run the recursive calls <code>rec_fib(3)</code> and <code>rec_fib(2)</code> to find the 4th number. We already know that <code>rec_fib(3)</code> runs the recursive calls <code>rec_fib(2)</code> and <code>rec_fib(1)</code>. We&#39;re calling <code>rec_fib(2)</code> twice! But is that the problem? <code>rec_fib(2)</code> only returns 1.</p>
+<p><img src="" alt="Image goes here"></p>
+<p>What about <code>rec_fib(5)</code>? It calls <code>rec_fib(4)</code> and <code>rec_fib(3)</code>. We know that <code>rec_fib(4)</code> calls <code>rec_fib(3)</code> and <code>rec_fib(2)</code>. Wait, now we&#39;re calling <code>rec_fib(3)</code> twice! And now <code>rec_fib(2)</code> is getting called three times!</p>
+<p><img src="" alt="Image goes here"></p>
+<p>It looks like for large nth numbers, we&#39;re running the same method calls multiple times. Multiple calls on the same method can become a problem quickly. But in this case how quickly does it become a problem? I did a little benchmarking using <a href="http://www.ruby-doc.org/stdlib-1.9.3/libdoc/benchmark/rdoc/Benchmark.html" target="_blank">Ruby&#39;s Benchmark module</a> and here are the results:</p>
+<table>
+    <tr>
+        <th>n</th>
+        <th>fib(n) time (s)</th>
+        <th>rec_fib(n) time (s)</th>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>0.000</td>
+        <td>0.000</td>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td>0.000</td>
+        <td>0.001</td>
+    </tr>
+    <tr>
+        <td>30</td>
+        <td>0.000</td>
+        <td>0.105</td>
+    </tr>
+    <tr>
+        <td>40</td>
+        <td>0.000</td>
+        <td>12.508</td>
+    </tr>
+    <tr>
+        <td>50</td>
+        <td>0.000</td>
+        <td>1560.880</td>
+    </tr>
+</table>
+
+<p>As you can see, the recursive solution grows extremely quickly, while the iterative solution is so fast, it can compute in less than a millisecond!</p>
+<p>So what is the Big O notation of the two solutions? We&#39;ll start with the iterative solution. Looking at the method, we can see that for an input of 1 or 2, the Big O is O(1). But for any other case, we have to iterate once through the numbers from 3 to n. If you remember back to chapter 3, a single interation is associated with O(n) time. So, the worst case for the iterative solution of the Fibonacci number is O(n).</p>
+<p>What about for the recursive solution? This one is much tougher to figure out and uses a Big O notation that you probably haven&#39;t seen before. Let&#39;s break down what&#39;s going on for each line.</p>
+<pre><code class="lang-ruby"><span class="hljs-keyword">return</span> <span class="hljs-number">1</span> <span class="hljs-keyword">if</span> n &lt;= <span class="hljs-number">2</span>
+</code></pre>
+<p>This line is the simple case. It is O(1).</p>
+<pre><code class="lang-ruby">rec_fib(n - <span class="hljs-number">1</span>) + rec_fib(n - <span class="hljs-number">2</span>)
+</code></pre>
+<p>Here is the tough line. What are the Big O&#39;s of the recursive calls <code>rec_fib(n - 1)</code> and <code>rec_fib(n - 2)</code>? We can solve this by thinking recursively again! Let&#39;s say we call <code>rec_fib(3)</code>. This method call ends up with two recursive calls, <code>rec_fib(2)</code> and <code>rec_fib(1)</code>. We know that for both of the two recursive calls, they run in O(1) time. So the Big O of <code>rec_fib(3)</code> is the sum of the Big O&#39;s of the two recursive calls.  Let&#39;s build a table to see what is happening:</p>
+<table>
+<tr>
+    <th>n</th>
+    <th>Big O</th>
+</tr>
+<tr>
+    <td>1</td>
+    <td>1</td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>1</td>
+</tr>
+<tr>
+    <td>3</td>
+    <td>2</td>
+</tr>
+<tr>
+    <td>4</td>
+    <td>3</td>
+</tr>
+<tr>
+    <td>5</td>
+    <td>5</td>
+</tr>
+<tr>
+    <td>6</td>
+    <td>8</td>
+</tr>
+<tr>
+    <td>7</td>
+    <td>13</td>
+</tr>
+<tr>
+    <td>8</td>
+    <td>21</td>
+</tr>
+</table>
+
+<p>Notice anything familiar? The Big O expands just like the Fibonacci Sequence! That means that for the recursive solution, we have O(fib(n))! That&#39;s why the recursive solution is taking so long to complete. The 50th Fibonacci number is 12586269025. The iterative solution only needs to take 50 units of time because it is O(n), while the recursive solution takes 12586269025 units of time because it is O(fib(n))! If you want a more detailed, mathy response, you can look <a href="http://stackoverflow.com/questions/360748/computational-complexity-of-fibonacci-sequence" target="_blank">here</a> and <a href="http://courses.csail.mit.edu/6.01/spring07/lectures/lecture4.pdf" target="_blank">page 5 here</a>.</p>
+<p>With all that being said, does this mean recursion is always the wrong way? No! Recursion is a very helpful way to solve many different problems.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../recursion/recursion_isnt_always_the_answer.html" class="navigation navigation-prev " aria-label="Previous page: Recursion isn&#39;t always the answer!"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../recursion/recursion_isnt_always_the_answer_part_ii.html" class="navigation navigation-next " aria-label="Next page: Stack Level Too Deep!"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

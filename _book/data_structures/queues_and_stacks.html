@@ -1,0 +1,749 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../manifest.appcache">
+    
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        
+        <meta charset="UTF-8">
+        <title>Stacks and Queues | Algorithms for Web Devs</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="">
+        <meta name="description" content="Ah, algorithms. A dirty word in web development. The mere mention of the word makes some programmers cower in fear. For those of you without a technical background, you might instantly think “MATH! Anything but math!”. If you’ve heard about Google, you’ve probably heard someone talk about the “Google Search Algorithm”. But the word shouldn’t scare you. It has been built up over the years as something to be feared, to be complicated, to be strictly mathematical. But that’s not what it means at all. Algorithms are, at their core, the steps taken to solve a problem. A course on algorithms would be better titled “Programming Problem Solving.”">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../data_structures/linked_lists.html" />
+        
+        
+        <link rel="prev" href="../data_structures/arrays.html" />
+        
+
+        <meta property="og:title" content="Stacks and Queues | Algorithms for Web Devs">
+        <meta property="og:site_name" content="Algorithms for Web Devs">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+        
+    </head>
+    <body>
+        
+        
+
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+
+
+        
+    <div class="book"  data-level="4.2" data-basepath=".." data-revision="1401907660337">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    
+    <a href="https://github.com/null" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >Algorithms for Web Devs</a>
+    </h1>
+</div>
+
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+
+        
+
+        
+
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+    
+        <li class="chapter " data-level="1" data-path="problem_solving/README.html">
+            
+            <a href="../problem_solving/README.html">
+                <i class="fa fa-check"></i> <b>1.</b> Problem Solving
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="what_happens_when_you_run_code/README.html">
+            
+            <a href="../what_happens_when_you_run_code/README.html">
+                <i class="fa fa-check"></i> <b>2.</b> What happens when you run code?
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="big_o_notation/README.html">
+            
+            <a href="../big_o_notation/README.html">
+                <i class="fa fa-check"></i> <b>3.</b> Big O Notation
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="data_structures/README.html">
+            
+            <a href="../data_structures/README.html">
+                <i class="fa fa-check"></i> <b>4.</b> Data Structures
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="data_structures/arrays.html">
+            
+            <a href="../data_structures/arrays.html">
+                <i class="fa fa-check"></i> <b>4.1.</b> Arrays
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="data_structures/queues_and_stacks.html">
+            
+            <a href="../data_structures/queues_and_stacks.html">
+                <i class="fa fa-check"></i> <b>4.2.</b> Stacks and Queues
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="data_structures/linked_lists.html">
+            
+            <a href="../data_structures/linked_lists.html">
+                <i class="fa fa-check"></i> <b>4.3.</b> Linked Lists
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="data_structures/hashes.html">
+            
+            <a href="../data_structures/hashes.html">
+                <i class="fa fa-check"></i> <b>4.4.</b> Hashes
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="data_structures/trees.html">
+            
+            <a href="../data_structures/trees.html">
+                <i class="fa fa-check"></i> <b>4.5.</b> Trees
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="data_structures/graphs.html">
+            
+            <a href="../data_structures/graphs.html">
+                <i class="fa fa-check"></i> <b>4.6.</b> Graphs
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="recursion/README.html">
+            
+            <a href="../recursion/README.html">
+                <i class="fa fa-check"></i> <b>5.</b> Recursion
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="recursion/how_to_think_recursively.html">
+            
+            <a href="../recursion/how_to_think_recursively.html">
+                <i class="fa fa-check"></i> <b>5.1.</b> How to Think Recursively
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="recursion/recursion_isnt_always_the_answer.html">
+            
+            <a href="../recursion/recursion_isnt_always_the_answer.html">
+                <i class="fa fa-check"></i> <b>5.2.</b> Recursion isn&#39;t always the answer!
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="recursion/the_fibonacci_sequence.html">
+            
+            <a href="../recursion/the_fibonacci_sequence.html">
+                <i class="fa fa-check"></i> <b>5.2.1.</b> The Fibonacci Sequence and Recursion
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="recursion/recursion_isnt_always_the_answer_part_ii.html">
+            
+            <a href="../recursion/recursion_isnt_always_the_answer_part_ii.html">
+                <i class="fa fa-check"></i> <b>5.2.2.</b> Stack Level Too Deep!
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="recursion/caching.html">
+            
+            <a href="../recursion/caching.html">
+                <i class="fa fa-check"></i> <b>6.</b> Caching
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="sorting_algorithms/README.html">
+            
+            <a href="../sorting_algorithms/README.html">
+                <i class="fa fa-check"></i> <b>7.</b> Sorting Algorithms
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="sorting_algorithms/selection_sort.html">
+            
+            <a href="../sorting_algorithms/selection_sort.html">
+                <i class="fa fa-check"></i> <b>7.1.</b> Selection Sort
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="sorting_algorithms/insertion_sort.html">
+            
+            <a href="../sorting_algorithms/insertion_sort.html">
+                <i class="fa fa-check"></i> <b>7.2.</b> Insertion Sort
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="sorting_algorithms/bubble_sort.html">
+            
+            <a href="../sorting_algorithms/bubble_sort.html">
+                <i class="fa fa-check"></i> <b>7.3.</b> Bubble Sort
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="sorting_algorithms/merge_sort.html">
+            
+            <a href="../sorting_algorithms/merge_sort.html">
+                <i class="fa fa-check"></i> <b>7.4.</b> Merge Sort
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="sorting_algorithms/quick_sort.html">
+            
+            <a href="../sorting_algorithms/quick_sort.html">
+                <i class="fa fa-check"></i> <b>7.5.</b> Quick Sort
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="sorting_algorithms/radix_sort.html">
+            
+            <a href="../sorting_algorithms/radix_sort.html">
+                <i class="fa fa-check"></i> <b>7.6.</b> Radix Sort
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="array_algorithms/README.html">
+            
+            <a href="../array_algorithms/README.html">
+                <i class="fa fa-check"></i> <b>8.</b> Array Algorithms
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="tree_algorithms/README.html">
+            
+            <a href="../tree_algorithms/README.html">
+                <i class="fa fa-check"></i> <b>9.</b> Tree Algorithms
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="graph_algorithms/README.html">
+            
+            <a href="../graph_algorithms/README.html">
+                <i class="fa fa-check"></i> <b>10.</b> Graph Algorithms
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="p_vs_np/README.html">
+            
+            <a href="../p_vs_np/README.html">
+                <i class="fa fa-check"></i> <b>11.</b> P vs. NP
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="string_algorithms/README.html">
+            
+            <a href="../string_algorithms/README.html">
+                <i class="fa fa-check"></i> <b>12.</b> String Algorithms
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="other_algorithms/README.html">
+            
+            <a href="../other_algorithms/README.html">
+                <i class="fa fa-check"></i> <b>13.</b> Other Algorithms
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="interviewing/README.html">
+            
+            <a href="../interviewing/README.html">
+                <i class="fa fa-check"></i> <b>14.</b> Interviewing
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="14.1" data-path="interviewing/bitly_clone.html">
+            
+            <a href="../interviewing/bitly_clone.html">
+                <i class="fa fa-check"></i> <b>14.1.</b> bit.ly clone
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="languages_overview/README.html">
+            
+            <a href="../languages_overview/README.html">
+                <i class="fa fa-check"></i> <b>15.</b> Languages Overview
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16" data-path="framework_resources/README.html">
+            
+            <a href="../framework_resources/README.html">
+                <i class="fa fa-check"></i> <b>16.</b> Framework Resources
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="17" data-path="learning_resources/README.html">
+            
+            <a href="../learning_resources/README.html">
+                <i class="fa fa-check"></i> <b>17.</b> Learning Resources
+            </a>
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 17.647058823529413%;min-width: 14.705882352941176%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../problem_solving/README.html" title="Problem Solving" class="chapter done new-chapter" data-progress="1" style="left: 2.9411764705882355%;"></a>
+    
+        <a href="../what_happens_when_you_run_code/README.html" title="What happens when you run code?" class="chapter done new-chapter" data-progress="2" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../big_o_notation/README.html" title="Big O Notation" class="chapter done new-chapter" data-progress="3" style="left: 8.823529411764707%;"></a>
+    
+        <a href="../data_structures/README.html" title="Data Structures" class="chapter done new-chapter" data-progress="4" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../data_structures/arrays.html" title="Arrays" class="chapter done " data-progress="4.1" style="left: 14.705882352941176%;"></a>
+    
+        <a href="../data_structures/queues_and_stacks.html" title="Stacks and Queues" class="chapter done " data-progress="4.2" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../data_structures/linked_lists.html" title="Linked Lists" class="chapter  " data-progress="4.3" style="left: 20.58823529411765%;"></a>
+    
+        <a href="../data_structures/hashes.html" title="Hashes" class="chapter  " data-progress="4.4" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../data_structures/trees.html" title="Trees" class="chapter  " data-progress="4.5" style="left: 26.470588235294116%;"></a>
+    
+        <a href="../data_structures/graphs.html" title="Graphs" class="chapter  " data-progress="4.6" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../recursion/README.html" title="Recursion" class="chapter  new-chapter" data-progress="5" style="left: 32.35294117647059%;"></a>
+    
+        <a href="../recursion/how_to_think_recursively.html" title="How to Think Recursively" class="chapter  " data-progress="5.1" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../recursion/recursion_isnt_always_the_answer.html" title="Recursion isn&#39;t always the answer!" class="chapter  " data-progress="5.2" style="left: 38.23529411764706%;"></a>
+    
+        <a href="../recursion/the_fibonacci_sequence.html" title="The Fibonacci Sequence and Recursion" class="chapter  " data-progress="5.2.1" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../recursion/recursion_isnt_always_the_answer_part_ii.html" title="Stack Level Too Deep!" class="chapter  " data-progress="5.2.2" style="left: 44.11764705882353%;"></a>
+    
+        <a href="../recursion/caching.html" title="Caching" class="chapter  new-chapter" data-progress="6" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../sorting_algorithms/README.html" title="Sorting Algorithms" class="chapter  new-chapter" data-progress="7" style="left: 50%;"></a>
+    
+        <a href="../sorting_algorithms/selection_sort.html" title="Selection Sort" class="chapter  " data-progress="7.1" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../sorting_algorithms/insertion_sort.html" title="Insertion Sort" class="chapter  " data-progress="7.2" style="left: 55.88235294117647%;"></a>
+    
+        <a href="../sorting_algorithms/bubble_sort.html" title="Bubble Sort" class="chapter  " data-progress="7.3" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../sorting_algorithms/merge_sort.html" title="Merge Sort" class="chapter  " data-progress="7.4" style="left: 61.76470588235294%;"></a>
+    
+        <a href="../sorting_algorithms/quick_sort.html" title="Quick Sort" class="chapter  " data-progress="7.5" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../sorting_algorithms/radix_sort.html" title="Radix Sort" class="chapter  " data-progress="7.6" style="left: 67.6470588235294%;"></a>
+    
+        <a href="../array_algorithms/README.html" title="Array Algorithms" class="chapter  new-chapter" data-progress="8" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../tree_algorithms/README.html" title="Tree Algorithms" class="chapter  new-chapter" data-progress="9" style="left: 73.52941176470588%;"></a>
+    
+        <a href="../graph_algorithms/README.html" title="Graph Algorithms" class="chapter  " data-progress="10" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../p_vs_np/README.html" title="P vs. NP" class="chapter  " data-progress="11" style="left: 79.41176470588235%;"></a>
+    
+        <a href="../string_algorithms/README.html" title="String Algorithms" class="chapter  " data-progress="12" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../other_algorithms/README.html" title="Other Algorithms" class="chapter  " data-progress="13" style="left: 85.29411764705883%;"></a>
+    
+        <a href="../interviewing/README.html" title="Interviewing" class="chapter  " data-progress="14" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../interviewing/bitly_clone.html" title="bit.ly clone" class="chapter  " data-progress="14.1" style="left: 91.17647058823529%;"></a>
+    
+        <a href="../languages_overview/README.html" title="Languages Overview" class="chapter  " data-progress="15" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../framework_resources/README.html" title="Framework Resources" class="chapter  " data-progress="16" style="left: 97.05882352941177%;"></a>
+    
+        <a href="../learning_resources/README.html" title="Learning Resources" class="chapter  " data-progress="17" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_9698">
+                    
+                        <h1 id="stacks-and-queues">Stacks and Queues</h1>
+<h2 id="stacks">Stacks</h2>
+<p>Stacks can be pictured as a stack of plates. As you add plates to the stack, you always add them to the top, not the bottom. Whenever you take a plate away, you grab it from the top of the stack. This is a Last-in, First-out data structure, where the last item that was added to the stack is the first item that is removed.</p>
+<p>You can use an array to implement the functionality of a stack. Let&#39;s take a look at what that would look like.</p>
+<p>We start with a stack with one element, 36. 54 is being added to the stack.</p>
+<p><img src="http://i.imgur.com/q8HLdwo.png" alt="Stack"></p>
+<p>Now our stack has two elements, 36 and 54. 36 is on the bottom of the stack and 54 is on the top. 15 is being added to the stack.</p>
+<p><img src="http://i.imgur.com/2nQZxMa.png" alt="Stack"></p>
+<p>Our stack has three elements, 36, 54 and 15. 36 is on the bottom of the stack and 15 is on the top. We add 47 to the stack.</p>
+<p><img src="http://i.imgur.com/gPzoZlm.png" alt="Stack"></p>
+<p>Time to start taking items away! Because 47 was the last element added to the stack, it is the first element removed. (Last in, First out)</p>
+<p><img src="http://i.imgur.com/4yV9GCb.png" alt="Stack"></p>
+<p>We can repeat this process with the last three elements as well.</p>
+<p><img src="http://i.imgur.com/mqtbQ5T.png" alt="Stack">
+<img src="http://i.imgur.com/l80QyAl.png" alt="Stack">
+<img src="http://i.imgur.com/AVWZSoD.png" alt="Stack"></p>
+<p>Take a minute to think about why an array can work for the stack data structure. The two methods that are being used on the stack are <code>push</code> and <code>pop</code>. They are doing the same thing for a stack as they would for an array: adding an element to the end or removing the element at the end. Now, if we think about the Big O of those two methods, it seems that an array is already really fast, <code>O(1)</code> for both <code>push</code> and <code>pop</code>! In the case of a stack, using an array to build out your stack makes perfect sense.</p>
+<p>However, a word of warning. If you want your stack to only be able to take and add items to the top of the stack, using an array could cause issues. Someone that comes behind you might use <code>.shift</code> or something similar, nullifying the purpose of the stack. If this is the case, a custom stack class is your best bet. Below is the code for a basic stack.</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Stack</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize
+    <span class="hljs-variable">@arr</span> = []
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>push(element)
+    <span class="hljs-variable">@arr</span>.push(element)
+    element
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>pop
+    <span class="hljs-variable">@arr</span>.pop
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>peak
+    <span class="hljs-variable">@arr</span>.last
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<h2 id="queues">Queues</h2>
+<p>Queues are like lines at an amusement park. As people get in line, they get in the back of it. Whenever someone gets to get on the ride, they leave the line from the front of it. The queue is an example of First-in, First-out data structure, where the first item that was added to the queue is the first item that is removed.</p>
+<p>While queues can be implemented using arrays, it is not the most efficient way. Let&#39;s look at what&#39;s happening with a queue to understand where the inefficiencies lie.</p>
+<p>We&#39;ll start with a queue that has 36 as the first element. 54 is being added to the queue.</p>
+<p><img src="http://i.imgur.com/MWq6u6b.png" alt="Queue"></p>
+<p>The queue now has two elements, 36 and 54. 36 is the first element. 15 is being added to the queue, and will be added to the end.</p>
+<p><img src="http://i.imgur.com/G2eeS0i.png" alt="Queue"></p>
+<p>The queue now has three elements, 36, 54 and 15. 36 is the first element and 15 is the last element. 47 is being added to the queue and will be added to the end.</p>
+<p><img src="http://i.imgur.com/VxFnjuK.png" alt="Queue"></p>
+<p>Our queue now has 4 elements, 36, 54, 15, and 47. 36 is the at the beginning of our queue and 47 is at the end. When we remove an item with queue.shift, we remove 36 because it is at the beginning. This is the opposite of removing items from the stack.</p>
+<p><img src="http://i.imgur.com/kxo1sdH.png" alt="Queue"></p>
+<p>The removal process can be repeated to remove the remaining elements from our queue.</p>
+<p><img src="http://i.imgur.com/Y5jO22Q.png" alt="Queue">
+<img src="http://i.imgur.com/pzlNM95.png" alt="Queue">
+<img src="http://i.imgur.com/al7TAfr.png" alt="Queue"></p>
+<p>Now that we&#39;ve gone through how the queue works, let&#39;s take a minute to determine why we wouldn&#39;t want to use an array to store our queue elements. It comes down to the commands that are being used. We want to be able to both add and remove items in <code>O(1)</code> time, but can we do that using an array in our queue? We already know that the <code>array.push</code> method takes <code>O(1)</code> time. What about <code>array.shift</code>? If you remember back to the array section, <code>array.shift</code> runs in <code>O(n)</code> time! The larger our queue grows, the slower it will get if we use arrays to store our elements. Is all lost? Not necessarily! We&#39;re going to build our own data structure from scratch!  Let&#39;s take a look at the code we can use to build it.</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span></span>
+  <span class="hljs-keyword">attr_accessor</span> <span class="hljs-symbol">:child</span>
+  <span class="hljs-keyword">attr_reader</span> <span class="hljs-symbol">:value</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize(value)
+    <span class="hljs-variable">@value</span> = value
+    <span class="hljs-variable">@child</span> = <span class="hljs-keyword">nil</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Queue</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize()
+    <span class="hljs-variable">@start</span> = <span class="hljs-keyword">nil</span>
+    <span class="hljs-variable">@end</span> = <span class="hljs-keyword">nil</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>push(value)
+    node = <span class="hljs-constant">Node</span>.new(value)
+    <span class="hljs-keyword">if</span> <span class="hljs-variable">@end</span>
+      <span class="hljs-variable">@end</span>.child = node
+      <span class="hljs-variable">@end</span> = node
+    <span class="hljs-keyword">else</span>
+      <span class="hljs-variable">@start</span> = node
+      <span class="hljs-variable">@end</span> = node
+    <span class="hljs-keyword">end</span>
+    value
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>shift
+    <span class="hljs-keyword">if</span> <span class="hljs-variable">@start</span>
+      value = <span class="hljs-variable">@start</span>.value
+      <span class="hljs-variable">@end</span> = <span class="hljs-keyword">nil</span> <span class="hljs-keyword">if</span> <span class="hljs-variable">@start</span> == <span class="hljs-variable">@end</span>
+      <span class="hljs-variable">@start</span> = <span class="hljs-variable">@start</span>.child
+    <span class="hljs-keyword">else</span>
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">nil</span>
+    <span class="hljs-keyword">end</span>
+    value
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>peak
+    <span class="hljs-variable">@start</span> ? <span class="hljs-variable">@start</span>.value <span class="hljs-symbol">:</span> <span class="hljs-keyword">nil</span>
+  <span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>There&#39;s a lot going on here! Time to break it down.</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span></span>
+  <span class="hljs-keyword">attr_accessor</span> <span class="hljs-symbol">:child</span>
+  <span class="hljs-keyword">attr_reader</span> <span class="hljs-symbol">:value</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize(value)
+    <span class="hljs-variable">@value</span> = value
+    <span class="hljs-variable">@child</span> = <span class="hljs-keyword">nil</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>The node class is the basic building block of our queue. It only has two instance variables, a <code>value</code> and a <code>child</code>. The <code>value</code> holds whatever we are storing in the queue, such as a number, an instance of a class, or a hash. The <code>child</code> is the connector that attaches one node to another. Because we only have the <code>child</code> variable, we can only from the front to the end of the queue. However, there isn&#39;t a case for going back the other direction, so a <code>parent</code> variable is not needed. The node has to have a <code>value</code> to be initialized, but the <code>child</code> can be set at any time via the <code>attr_accessor</code>. The <code>value</code> only has an <code>attr_reader</code>, so it cannot be changed by anything outside of the node class. This is to protect the data in the queue.</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Queue</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize()
+    <span class="hljs-variable">@start</span> = <span class="hljs-keyword">nil</span>
+    <span class="hljs-variable">@end</span> = <span class="hljs-keyword">nil</span>
+  <span class="hljs-keyword">end</span>
+</code></pre>
+<p>Here is the beginnings of our queue class. We only have two instance variables, the <code>start</code> and the <code>end</code> which point to the beginning and end of our queue, respectively. That is the only thing we need to track within our queue. We need to be able to remove object from the front, using the <code>start</code> variable, and we need to add items to the end, using the <code>end</code> variable.</p>
+<pre><code class="lang-ruby">  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>push(value)
+    node = <span class="hljs-constant">Node</span>.new(value)
+    <span class="hljs-keyword">if</span> <span class="hljs-variable">@end</span>
+      <span class="hljs-variable">@end</span>.child = node
+      <span class="hljs-variable">@end</span> = node
+    <span class="hljs-keyword">else</span>
+      <span class="hljs-variable">@start</span> = node
+      <span class="hljs-variable">@end</span> = node
+    <span class="hljs-keyword">end</span>
+    value
+  <span class="hljs-keyword">end</span>
+</code></pre>
+<p>To add items to our queue, we will build our own push method. It takes a <code>value</code> as a parameter and uses the value to create a new node. The <code>end</code> instance variable is used to see how to add the node to the queue. If there is a node in the queue, then <code>end</code> will equal <code>true</code>. In this case, the current end node has its child set to the node being added, and the <code>end</code> variable is set to the new node.</p>
+<p>If there are no nodes in the queue, then the if-else statement will run the code in the else block. It will set both the <code>start</code> and the <code>end</code> variables to the node, because it is now the only node in the queue.</p>
+<p>Finally, the push method returns the value.</p>
+<pre><code class="lang-ruby">  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>shift
+    <span class="hljs-keyword">if</span> <span class="hljs-variable">@start</span>
+      value = <span class="hljs-variable">@start</span>.value
+      <span class="hljs-variable">@end</span> = <span class="hljs-keyword">nil</span> <span class="hljs-keyword">if</span> <span class="hljs-variable">@start</span> == <span class="hljs-variable">@end</span>
+      <span class="hljs-variable">@start</span> = <span class="hljs-variable">@start</span>.child
+    <span class="hljs-keyword">else</span>
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">nil</span>
+    <span class="hljs-keyword">end</span>
+    value
+  <span class="hljs-keyword">end</span>
+</code></pre>
+<p>A shift method is created to remove individual items from the queue. The flow of the shift method follows the basic flow of the push method. If there is a <code>start</code> node, then you save the value to a <code>value</code> variable. Then, you replace the <code>start</code> node with its child. In order to make sure that you update the <code>end</code> variable if you are removing the last item in the queue (in the case above, it was when we used queue.shift on 47). This sets the <code>end</code> to nil, because there are no more elements in our queue. Finally, the method returns the <code>value</code>.</p>
+<p>If <code>start</code> is nil (there are no elements in the queue), then it returns <code>nil</code>.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../data_structures/arrays.html" class="navigation navigation-prev " aria-label="Previous page: Arrays"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../data_structures/linked_lists.html" class="navigation navigation-next " aria-label="Next page: Linked Lists"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
