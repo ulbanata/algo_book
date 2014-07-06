@@ -14,12 +14,6 @@ arr = [:hello, "test", {}, 3, 2.5, [5, 6]]
 
 They can hold symbols `:hello`, strings `"test"`, hashes `{}`, integers `3`, floats `2.5`, and even other arrays `[5, 6]`. We can call any array method on our array `arr`.
 
-Now let's look at arrays in JavaScript:
-
-```js
-arr = ["test", {}, 3, 2.5]
-```
-
 But how does it work behind the scenes? First, let's think about how memory works. We can picture our memory as a big, empty lego sheet. Whenever we store a data type or a data structure, lego blocks appear on our lego sheet to store that data. Let's put a string on our lego memory sheet. This block (Need visuals@!!!!!)
 
 ## Array Overview

@@ -1,5 +1,7 @@
 # Recursive Solutions
 
+The recursive solutions for printing binary trees are shorter and less verbose than the iterative solutions. The important thing to remember here is that we are doing a depth first search and the location of the puts statement determines what kind of order the tree will be printed in.
+
 In-Order:
 ```ruby
 def in_order(node)
@@ -8,6 +10,8 @@ def in_order(node)
   in_order(node.right_child) if node.right_child
 end
 ```
+
+In-order printing is the most common. Going back to the binary tree search, the method we used to rebalance the tree was actually an in-order print. It retrives the numbers of a binary search tree from smallest to largest.
 
 Pre-Order:
 ```ruby
@@ -18,6 +22,8 @@ def pre_order(node)
 end
 ```
 
+The pre-order printing method is the same as the in-order except the puts statement is the first line in the method, before the children are visited.
+
 Post-Order:
 ```ruby
 def post_order(node)
@@ -26,3 +32,5 @@ def post_order(node)
   puts node.value
 end
 ```
+
+The post-order printing method has the puts statement at the end of the method, after the children have been visited.

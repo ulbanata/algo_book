@@ -43,7 +43,12 @@ def in_order(node)
       end
     elsif node.left == prev
       if node.right
-
+        stack.push(node.rigth)
+      else
+        p node.value
+    else
+      p node.value
+    end
   end
 end
 ```
