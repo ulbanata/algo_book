@@ -1,1 +1,30 @@
 # Bubble Sort
+
+![Bubble Sort Part ](http://i.imgur.com/vEii5qt.png)
+![Bubble Sort Part ](http://i.imgur.com/pFyU9Cd.png)
+![Bubble Sort Part ](http://i.imgur.com/TTAX1Sn.png)
+![Bubble Sort Part ](http://i.imgur.com/GG4m4ZY.png)
+![Bubble Sort Part ](http://i.imgur.com/HNZNJa6.png)
+![Bubble Sort Part ](http://i.imgur.com/U1fW2zQ.png)
+![Bubble Sort Part ](http://i.imgur.com/jXslI9W.png)
+![Bubble Sort Part ](http://i.imgur.com/Bdf6wkX.png)
+![Bubble Sort Part ](http://i.imgur.com/LQcp0Ba.png)
+![Bubble Sort Part ](http://i.imgur.com/GVD0z2h.png)
+![Bubble Sort Part ](http://i.imgur.com/qexQ6ht.png)
+![Bubble Sort Part ](http://i.imgur.com/eEmzU2W.png)
+![Bubble Sort Part ](http://i.imgur.com/7Ch1kWR.png)
+![Bubble Sort Part ](http://i.imgur.com/6FNOOHX.png)
+![Bubble Sort Part ](http://i.imgur.com/dVi4IYG.png)
+![Bubble Sort Part ](http://i.imgur.com/Uo3FNWp.png)
+
+## Almost Sorted Array
+
+![Almost Sorted Bubble Sort Part ](http://i.imgur.com/USqiALL.png)
+![Almost Sorted Bubble Sort Part ](http://i.imgur.com/1CePv6q.png)
+![Almost Sorted Bubble Sort Part ](http://i.imgur.com/srTzv0C.png)
+![Almost Sorted Bubble Sort Part ](http://i.imgur.com/bdoMHoj.png)
+![Almost Sorted Bubble Sort Part ](http://i.imgur.com/eAmzAYZ.png)
+![Almost Sorted Bubble Sort Part ](http://i.imgur.com/YCQcxW1.png)
+![Almost Sorted Bubble Sort Part ](http://i.imgur.com/9QU7AAC.png)
+![Almost Sorted Bubble Sort Part ](http://i.imgur.com/qIoaAkK.png)
+![Almost Sorted Bubble Sort Part ](http://i.imgur.com/Uo3FNWp.png)
