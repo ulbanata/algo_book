@@ -124,7 +124,7 @@ Wow, it looks like O(n<sup>2</sup>) takes a lot of time to run that algorithm! B
 </tr>
 </table>
 
-Wow, look at the differences here. For 1 million entries, we can have an algorithm that takes anywhere from 19.9 milliseconds to 31.7 years, depending on how efficient it is. This is why the efficiency matters. Use the wrong algorithm for a large data set and it could take a long time to finish. Do this on a website and you'll cause it to crash. Cause your website to crash and your company can lose a lot of money from lack of sales during the downtime or upset customers ending their contracts. It has happened before and it will happen again. This book is to get you to think about how your algorithm works and how to improve it so it won't happen to you!
+Wow, look at the differences here. For 1 million entries, we can have an algorithm that takes anywhere from 19.9 milliseconds to 31.7 years, depending on how efficient it is. This is why the efficiency matters. Use the wrong algorithm for a large data set and it could take a long time to finish. Do this on a website and you'll cause it to crash. Cause your website to crash and your company can lose a lot of money from lack of sales during the downtime or upset customers ending their contracts. It has happened before and it will happen again. The purpose of this book is to get you to think about how your algorithm works and how to improve them so that won't happen to you!
 
 (For a little more context, 1,000,000 entries being ran through a factorial algorithm will have a run time that is longer than the expected lifespan of the universe)
 
