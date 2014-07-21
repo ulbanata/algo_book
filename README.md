@@ -79,7 +79,7 @@ Neural Network
 # Introduction
 
 ### What they are
-Ah, algorithms. A dirty word in web development. The mere mention of the word makes some programmers cower in fear. For those of you without a technical background, you might instantly think “MATH! Anything but math!”. If you’ve heard about Google, you’ve probably heard someone talk about the “Google Search Algorithm”. But the word shouldn’t scare you. It has been built up over the years as something to be feared, to be complicated, to be strictly mathematical. But that’s not what it means at all. Algorithms are, at their core, the steps taken to solve a problem. A course on algorithms would be better titled “Programming Problem Solving.”
+Ah, algorithms. A dirty word in web development. The mere mention of the word makes some programmers cower in fear. For those of you without a technical background, you might instantly think “MATH! Anything but math!”. If you’ve heard about Google, you’ve probably heard someone talk about the “Google Search Algorithm.” But the word shouldn’t scare you. It has been built up over the years as something to be feared, to be complicated, to be strictly mathematical. But that’s not what it means at all. Algorithms are, at their core, the steps taken to solve a problem. A course on algorithms would be better titled “Programming Problem Solving.”
 
 Let’s jump in and learn an algorithm. If you’ve taken the Ruby course on codecademy, you’ve probably already seen this one:
 
