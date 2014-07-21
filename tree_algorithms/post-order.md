@@ -28,9 +28,10 @@ end
 ```ruby
 def in_order(node)
   stack = Stack.new
-  prev = node
+  # prev = node
   stack.push(node)
   while stack.peek
+    prev = node
     node = stack.peek
     if prev.left_child == node || prev.right_child == node
       if node.left

@@ -20,13 +20,13 @@ Let's start with the easiest and best Big O notation available, the constant tim
 
 ### O(log(n))
 
-For some algorithms that use the divide and conquer methodology where they break the problem down and build it back up, the logarithmic Big O will come into play. This runtime is seen in many different search algorithms, such as a Binary Search. The runtime is less than a linear (O(n)) runtime and more than a contant (O(1)) runtime. If you think back to algebra class, a logarithm relates the solution to exponentiation to it's exponential. That means that for the equation 10^3 = 1000, the logarithm of the equation would be log<sub>10</sub>(1000) = 3. Because a computer works in binary, all of our logarithms will be a log<sub>2</sub>. Programmers shorten this to log.
+For some algorithms that use the divide and conquer methodology where they break the problem down and build it back up, the logarithmic Big O will come into play. This runtime is seen in many different search algorithms, such as a Binary Search. The runtime is less than a linear (O(n)) runtime and more than a contant (O(1)) runtime. If you think back to algebra class, a logarithm relates the solution to ** NOTE WORD CHOICE **  exponentiation to it's exponential. That means that for the equation 10^3 = 1000, the logarithm of the equation would be log<sub>10</sub>(1000) = 3. Because a computer works in binary, all of our logarithms will be a log<sub>2</sub>. Programmers shorten this to log.
 
 The runtime for a logarithmic algorithm grows logarithmically. For a 2 element array, it would take 1 time units to run. For a 4 element array, it would take 2 time units. For 16 elements, it would take 4 time units. For 1024 elements, 10 time units. You can see that logarithmic algorithms run much faster than linear algorithms for large data sets!
 
 ### O(n*log(n))
 
-The **O(n*log(n))** is a mix of the O(n) linear Big O and the O(log(n)) logarithmic Big O and is commonly called Log-linear. It is very common in efficient sorting algorithms, such as Merge Sort. The runtime runs between the O(n) linear time and the O(n<sup>2</sup>) quadratic time. The runtime can be found by multiplying the linear runtime by the logarithmic runtime. This means that, for a 4 element array, the runtime is 8, or 4 * 2. For a 1024 element array, the runtime is 10240, or 1024 * 10.
+The **O(n*log(n))** is a mix of the O(n) linear Big O and the O(log(n)) logarithmic Big O and is commonly called Log-linear. It is very common in efficient sorting algorithms, such as Merge Sort. The runtime runs between the O(n) linear time and the O(n<sup>2</sup>) quadratic time. The runtime can be found by multiplying the linear runtime by the logarithmic runtime. This means that, for a 4 element array, the runtime is 8, or 4 \* 2. For a 1024 element array, the runtime is 10240, or 1024 \* 10.
 
 ### O(2<sup>n</sup>)
 

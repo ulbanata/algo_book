@@ -1,5 +1,3 @@
 # Bubble Sort Solution
 
-```ruby
 
-```
