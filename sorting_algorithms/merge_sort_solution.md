@@ -57,4 +57,22 @@ def iter_mergesort(arr)
   end
   sol[0]
 end
+
+def merge(left_arr, right_arr)
+  sol = []
+  left_counter = 0
+  right_counter = 0
+
+  until left_counter >= left_arr.count || right_counter >= right_arr.count
+    if left_arr[left_counter] <= right_arr[right_counter]
+      sol << left_arr[left_counter]
+      left_counter += 1
+    else
+      sol << right_arr[right_counter]
+      right_counter += 1
+    end
+  end
+
+  sol + left_arr[left_counter..-1] + right_arr[right_counter..-1]
+end
 ```
