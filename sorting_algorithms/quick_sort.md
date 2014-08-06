@@ -1,3 +1,3 @@
-# Quick Sort
+# Quicksort
 
-
+Quicksort

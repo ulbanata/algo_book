@@ -78,7 +78,7 @@ Is 3 less than 4? It is, so the locations are swapped.
 
 Is 3 less than 2? It is not, so nothing is swapped.
 
-![Almost Sorted Bubble Sort Part]()
+![Almost Sorted Bubble Sort Part](http://i.imgur.com/0mO7Kxu.png)
 
 Is 2 less than 1? It is not, so nothing is swapped. The algorithm reached the beginning of the array, so the sorted elements are calculated and the pointer is assigned.
 

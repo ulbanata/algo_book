@@ -14,7 +14,7 @@ Is 5 less than 6? It is, so 5 and 6 swap locations.
 Is 5 less than 3? It is not, so the pointer moves to the next element.
 ![Insertion Sort Part 6](http://i.imgur.com/VdxfcVq.png)
 The pointer is now at the fourth element, 4.
-![Insertion Sort Part 7]()
+![Insertion Sort Part 7](http://i.imgur.com/cjwxa6i.png)
 Is 4 less than 6? It is, so 4 and 6 swap locations.
 ![Insertion Sort Part 8](http://i.imgur.com/uwZBDFx.png)
 Is 4 less than 5? It is, so 4 and 5 swap locations.
@@ -24,7 +24,7 @@ Is 4 less than 3? It is not, so the pointer moves to the next element.
 The pointer now points at the fifth element, 1.
 ![Insertion Sort Part 11](http://i.imgur.com/kpzV7HD.png)
 Is 1 less than 6? It is, so 1 and 6 swap locations.
-![Insertion Sort Part 12]()
+![Insertion Sort Part 12](http://i.imgur.com/xrlpLNO.png)
 Is 1 less than 5? It is, so 1 and 5 swap locations.
 ![Insertion Sort Part 13](http://i.imgur.com/WHrE8f7.png)
 Is 1 less than 4? It is, so 1 and 4 swap locations.
@@ -62,7 +62,7 @@ Is 3 smaller than 5? It is, so 3 and 5 swap locations.
 ![Almost Sorted Insertion Sort Part 6](http://i.imgur.com/yKG7PLd.png)
 Is 3 smaller than 4? It is, so 3 and 4 swap locations.
 
-![Almost Sorted Insertion Sort Part 7]()
+![Almost Sorted Insertion Sort Part 7](http://i.imgur.com/rGlhKQO.png)
 Is 3 smaller than 2? It is not, so the pointer goes to the next element.
 
 ![Almost Sorted Insertion Sort Part 8](http://i.imgur.com/Od7X1AL.png)
