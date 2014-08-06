@@ -71,3 +71,7 @@ These are the numbers of our BST printed out in pre-order.
 ```
 
 And our BST printed out in post-order.
+
+# Exercise
+
+Given the BST above and the result of each method, come up with the methods that print the same order for any Binary Tree. Start with the recursive method and then check your work with the recursive solutions.

@@ -23,3 +23,9 @@ Here you can see the family relationships for the blue node. The current node's 
 The current node's Children are the nodes one level below the current node that are connected to it. For this example, the highlighted node is in level 2 and the highlighted node's children are in level 3. There is no limit to how many children a node can have in a standard tree data structure. However, there are certain trees that put a limit on the number of children a node can have. Binary trees are one such example, and they only allow 2 children per parent.
 
 The current node's Siblings are any nodes that share the same parent as the current node. This also means that all sibling nodes are in the same level, but not all nodes in a level are siblings. (in this case, Level 2).
+
+# Binary Trees
+
+The binary tree is a specialized version of a tree. Its only rule is that a node can only have 0, 1, or 2 children.
+
+We saw earlier in our tree implementation that we were using a hash or an array to store all the children of a node. For a binary tree, most implementations score the two children using two different variables, left and right. This gives the tree more structure in describing which side of a node a child is on and is useful for some binary tree algorithms later on, such as binary search trees and order printing.

@@ -7,8 +7,8 @@ Let's say we're trying to find the [factorial of a number](http://en.wikipedia.o
 ```ruby
 def factorial(x)
   sol = 1
-  while x > 1
-    sol *= x
+  (1..x).each do |num|
+    sol *= num
   end
   sol
 end
