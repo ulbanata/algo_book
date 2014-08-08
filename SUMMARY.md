@@ -91,5 +91,6 @@
 * [Languages Overview](languages_overview/README.md)
 * [Framework Resources](framework_resources/README.md)
 * [P = NP?](p_vs_np/README.md)
+* [Glossary](p_vs_np/glossary.md)
 * [Learning Resources](learning_resources/README.md)
 

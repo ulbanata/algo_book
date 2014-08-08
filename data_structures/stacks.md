@@ -1,6 +1,6 @@
 # Stacks
 
-Stacks can be pictured as a stack of plates. As you add plates to the stack, you always add them to the top, not the bottom. Whenever you take a plate away, you grab it from the top of the stack. This is a Last-in, First-out data structure, where the last item that was added to the stack is the first item that is removed.
+The stack data structure is a useful data structure with many different uses. Stacks can be pictured as a stack of plates. As you add plates to the stack, you always add them to the top, not the bottom. Whenever you take a plate away, you grab it from the top of the stack. This is a Last-in, First-out data structure, where the last item that was added to the stack is the first item that is removed.
 
 You can use an array to implement the functionality of a stack. Let's take a look at what that would look like.
 

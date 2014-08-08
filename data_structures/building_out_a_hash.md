@@ -4,24 +4,7 @@ Figure it out yet? If not, here's a couple hints: Think about how arrays work. I
 
 If you're thinking that we can use the `.hash` as our index, you're almost correct! The main problem with using the `.hash` as the index is that our array is going to be huge! A 64 bit number can be any number from 0 to 18,446,744,073,709,551,615. That's a big array! And if you're only storing 4 things in your hash, that's a lot of memory to take up to store 4 items. Another thing you might have noticed is that the `.hash` method can also return negative numbers. What's a good fix for this?
 
-The modulo (%)! If we know how big our internal array is in our hash, we can use the modulo operator on our `.hash` to find the index we should insert our item. Now that we have the basics down, let's go through the problem solving process.
-
-1. What are we getting?
-    We're getting a key/value pair or a key. The key/value pair is to store the value in our hash, the key is to return the associated value if there is one.
-2. What are we returning? For both cases, we return the value.
-3. What are our assumptions? We can
-4. Write our tests. Our tests can be seen in the console. If we add objects to a hash, we can see if we can return them.
-5. Write pseudocode:
-In our MyHash class, we need the ability to add items to the hash with a key/value pair, get the value back given a key, and (internally) find the index given a key.
-
-```ruby
-    class MyHash
-
-    def InsertIntoHash
-    find
-```
-
-6. Break the problem up and start solving it individually.
+The modulo (%)! If we know how big our internal array is in our hash, we can use the modulo operator on our `.hash` to find the index we should insert our item. Now that we have the basics down, let's get to some code.
 
 ```ruby
 class MyHash

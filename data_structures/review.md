@@ -50,3 +50,9 @@
     <td></td>
 </tr>
 </table>
+
+# Exercises
+
+For each real world example, decide which data structure would be best to model it in a program.
+
+1.
