@@ -79,16 +79,21 @@ Neural Network
 # Introduction
 
 ### What they are
-Ah, algorithms. A dirty word in web development. The mere mention of the word makes some programmers cower in fear. For those of you without a technical background, you might instantly think “MATH! Anything but math!”. If you’ve heard about Google, you’ve probably heard someone talk about the “Google Search Algorithm.” But the word shouldn’t scare you. It has been built up over the years as something to be feared, to be complicated, to be strictly mathematical. But that’s not what it means at all. Algorithms are, at their core, the steps taken to solve a problem. A course on algorithms would be better titled “Programming Problem Solving.”
+Ah, algorithms. A <!-- sometimes --> dirty word in web development. The mere mention of the word makes some programmers cower in fear. For those of you without a technical background, you might instantly think “MATH! Anything but math!”. If you’ve heard about Google, you’ve probably heard someone talk about the “Google Search Algorithm.” But the word shouldn’t scare you. It has been built up over the years as something to be feared, to be complicated, to be strictly mathematical. But that’s not what it means at all. Algorithms are, at their core, the steps taken to solve a problem. A course on algorithms would be better titled “Programming Problem Solving.”
 
 Let’s jump in and learn an algorithm. If you’ve taken the Ruby course on codecademy, you’ve probably already seen this one:
 
+<!-- Code fence to make it look pretty! -->
 
+```ruby
 def sum(x, y)
   x + y
 end
+```
 
-Above is your first algorithm in CS! It’s a method that does addition for you. It takes in two numbers, stores them in the variables x and y, and then returns the answer, the sum of x and y.
+Above is your first algorithm in CS! It’s a method that does addition for you. It takes in two numbers, stores them in the variables `x` and `y`, and then returns the answer, the sum of x and y.
 
 ### Do I need to know math?
 The purpose of this book is to teach algorithms with as little math as possible. Math will be added in for those that want to delve deeper in their understanding, but most algorithms can be explained without getting too much into the math.
+
+<!-- PERSONAL SOAP BOX TIME: That said, math is not something to be feared. After all, you're a programmer! You already are familiar with math-style problem-solving (finding your starting point, identifying the desired end point, working out the steps in between). A deeper understanding of math is will within your reach. -->

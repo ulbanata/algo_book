@@ -28,7 +28,7 @@ We can repeat this process with the last three elements as well.
 
 Take a minute to think about why an array can work for the stack data structure. The two methods that are being used on the stack are `push` and `pop`. They are doing the same thing for a stack as they would for an array: adding an element to the end or removing the element at the end. Now, if we think about the Big O of those two methods, it seems that an array is already really fast, `O(1)` for both `push` and `pop`! In the case of a stack, using an array to build out your stack makes perfect sense.
 
-However, a word of warning. If you want your stack to only be able to take and add items to the top of the stack, using an array could cause issues. Someone that comes behind you might use `.shift` or something similar, nullifying the purpose of the stack. If this is the case, a custom stack class is your best bet. Below is the code for a basic stack.
+However, a word of warning. If you want your stack to only be able to take and add items to the top of the stack, using an array could cause issues. Someone that comes behind you might use `.shift` or something similar, nullifying the purpose of the stack. If this is the case, a custom stack class is your best bet. Below is the code for a basic stack. <!-- more explaination woudl be nice. Discussion of basing it off of the ruby Array class, etc. -->
 
 ```ruby
 class Stack
@@ -62,4 +62,4 @@ Run Times:
 * Removing an item: O(1)
 * Viewing the next item to be removed: O(1)
 
-Best built using an array.
+Best built using an array. <!-- How do you know this? -->

@@ -1,6 +1,6 @@
 # Queues
 
-Queues are like lines at an amusement park. As people get in line, they get in the back of it. Whenever someone gets to get on the ride, they leave the line from the front of it. The queue is an example of First-in, First-out data structure, where the first item that was added to the queue is the first item that is removed.
+Queues are like lines at an amusement park. As people get in line, they get in the back of it. Whenever someone gets to get on the ride, they leave the line from the front of it. The queue is an example of First-in, First-out data structure, where the first item that was added to the queue is the first item that is removed. <!-- This is in contrast to the Last In First Out of Stacks (always relate it back to what they learned earlier) -->
 
 While queues can be implemented using arrays, it is not the most efficient way. Let's look at what's happening with a queue to understand where the inefficiencies lie.
 
@@ -74,7 +74,7 @@ class Queue
 end
 ```
 
-There's a lot going on here! Time to break it down.
+There's a lot going on here! Time to break it down. <!-- I like this! You should do this for more examples -->
 
 ```ruby
 class Node
@@ -140,7 +140,7 @@ If `start` is nil (there are no elements in the queue), then it returns `nil`.
   def peek
     @start ? @start.value : nil
   end
-  ```
+```
 
   The peek method
 

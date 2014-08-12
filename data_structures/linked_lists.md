@@ -1,16 +1,16 @@
 # Linked Lists
-
-The linked list is a data structure that can be used to build many more detailed data structures. The basic building block is something called a **node**. The node will be talked about for several other data structures, such as trees and graphs, but in the context of the linked list, you can picture it as such:
+<!-- add build into ruby? Maybe also discuss other languges? -->
+The linked list is a data structure that can be used to build many more detailed data structures. The basic building block is something called a **node**. The node will be talked about for several other data structures, such as trees and graphs, but in the context of the linked list, you can picture it this way:
 
 ![Node](http://i.imgur.com/k8vVPDz.png)
-
-This node has two variables. The first is the data or payload that the node stores. In this case, it is the number 3. However, it could be any datatype or object. The second variable is a pointer that points to the next node in the linked list, if one exists.
+<!-- Maybe include a written description as well? Pros: visually impaired people, people who are not visual learners. -->
+This node (represented as a <!-- color? --> rectangle) has two variables (represented as <!-- color? --> boxes inside the rectangle). The first variable (box) is the data or payload that the node stores. In this case, it is the number 3. However, it could be any datatype or object<!-- examples? -->. The second variable (box) is a pointer that points to the next node in the linked list, if one exists.
 
 A linked list, made up of nodes, could be visualized as the structure below:
 
 ![Linked Lists](http://i.imgur.com/K2Xj8C0.jpg)
 
-This linked list contains 5 nodes. The first node, the **head** node, contains the value 3 and points to the second node, which contains the value 7. These pointers continue pointing to each preceding node until we get to the last node, the **tail** node. The tail node contains the value 10 and its pointer points to null.
+This linked list contains 5 nodes, each represented by a rectangle. The first node, the **head** node, contains the value 3 as one variable and a pointer to the second node as the second variable. The pointer points to the second node, which contains the value 7 and a pointer. These pointers continue pointing to each preceding node until we get to the last node, the **tail** node. The tail node contains the value 10 and its pointer points to null.
 
 The linked list looks very similar to an array. Both data structures have a structure (Their position in the data structure matters and can be found). They can store any datatype or object inside themselves. So why use a linked list?
 
@@ -26,7 +26,7 @@ Below, we have an example of removing the node containing the value 12 from the 
 
 ![Removing Node in Linked List](http://i.imgur.com/oHrT30e.png)
 
-What about searching for an item in the linked list? It will still take O(n) time because the linked list does not contain information on the location of any individual item a node contains. Hashes would be the data structure of choice to find out if something exists in the data structure in O(1) time.
+What about searching for an item in the linked list? It will still take O(n) time because the linked list does not contain information on the location of any individual item a node contains. Hashes would be the data structure of choice to find out if something exists in the data structure in O(1) time, which will be discussed in section 4.5.
 
 If the linked list can add items to the beginning in O(1) time, why do we use arrays? The first reason is that arrays are more memory efficient than linked lists. Pointing to the next node in the linked list does take up memory. It also makes the linked list a little more complicated than an array, and complexity should be avoided at all costs if it doesn't improve something else (Always tradeoffs!).
 
@@ -34,7 +34,7 @@ The other major weakness of linked lists is that you can't get to a certain node
 
 So what use is a linked list if you can't see what the nth node contains? When will it be useful? The next two data structures, stacks and queues, will dive deep into two potential uses for linked lists.
 
-# The Code
+# The Code <!-- Is there going to be a description of the code? How to use it, whatever?-->
 
 ```ruby
 class Node
@@ -108,7 +108,7 @@ end
 
 The linked list we looked at above is a **Singly Linked List**. Nodes only connect to the item that follows it. In a **Doubly Linked List**, each node has two pointers or connections. One connection is to the node that follows it. The other connection is to the node that precedes it.
 
-# Doubly Image Here
+<!-- # Doubly Image Here -->
 
 This extra connection allows us to alleviate the O(n) runtime that we run into when removing the tail node above. Instead of having to move from the beginning until the node before the tail node, we can instead start at the tail and go in reverse. The downside to using doubly linked lists is that it does increase the amount of memory that is used.
 
@@ -184,4 +184,4 @@ So let's review Linked Lists:
 * O(1) to add or remove a node (Faster than an array for any node added before the beginning)
 * O(n) to get to the nth node (Slower than an array)
 * O(n) to see if something is in the linked list (Same as an array)
-* Structured- The node exists in a location (Same as an array)
+* Structured- The node exists in a location (Same as an array) <!-- Go into this one more in the section! -->
