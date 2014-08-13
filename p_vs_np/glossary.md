@@ -16,11 +16,13 @@ Call Stack- The stack of frames that are created during a recursive call.
 
 Compiled Language- Programming language that has to have its code turned into a more basic language before it can be ran. (Opposite of an Interpreted Language)
 
+Compression- Process that reduces the size of a computer file by manipulating common patterns in the file.
+
 ## D
 
 Dev Environment- The environment a developer works in. Includes the Operating System, the languages and the tools.
 
-Duck Typing-
+Duck Typing- Idea in Object-oriented programming that allows multiple different objects to respond to the same method. This allows the calling object to use multiple types of objects in its use, greatly increasing its effectiveness.
 
 Dynamically Typed- Language that allows for a variable to contain any type of object. (Opposite of statically typed)
 

@@ -6,6 +6,5 @@
 4. Graph Algorithms
 5. Better review of data structures (Add in questions on what data structure to use?)
 6. More info for caching
-7. Binary Search Writeup
 8. How Ruby runs code
 9. More info and pics for Tail Call Optimization
