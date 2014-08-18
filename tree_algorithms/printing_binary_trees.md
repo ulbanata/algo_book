@@ -1,10 +1,10 @@
 # Printing Binary Trees
 
-A very common interview question pertains to printing out binary trees. There are three ways to print out a BT: in-order, pre-order and post-order. We'll use the same binary tree as we did for binary search trees.
+A very common interview question pertains to printing out binary trees. There are three common ways to print out a BT: in-order, pre-order and post-order. We'll use the same binary tree as we did for binary search trees.
 
 ![](http://i.imgur.com/FM8IOKo.png)
 
-Here is what our methods might look like when ran:
+Here is what our methods would print when ran:
 
 ```
 :001 > BST.in_order

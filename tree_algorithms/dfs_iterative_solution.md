@@ -14,4 +14,4 @@ def dfs(start_node)
 end
 ```
 
-The iterative solution to depth first search is more involved than the recursive solution. In order to run the depth first search, a stack is needed. I loop through the stack until its empty, printing each value and adding any of the current node's children to the stack.
+The iterative solution to depth first search is more involved than the recursive solution. In order to run the depth first search, a stack is needed. Remember that a stack is a Last-In, First-Out data structure. The last thing that was added is the first thing that is removed. Using a stack in this context means that whenever a node is removed from the stack, all of its children are then added. This results in visiting a node's children before visiting the same node's siblings, just like Depth First Search is supposed to work.

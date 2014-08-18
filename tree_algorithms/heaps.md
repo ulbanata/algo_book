@@ -140,4 +140,4 @@ For each node n above, its two children can be found by the equations `2*n + 2` 
 </tr>
 </table>
 
-For each node, n, you can find its parent with the equation `(n-1)/2`. Remember in Ruby that diving an integer with an integer will return an integer. For another language that will return a float, the equation would need to look like `((n-1)/2).floor`. Using this equation, **node 7's** parent is `(7-1)/2`, which reduces to **3**. **Node 88's** parent is `(88-1)/2`, which reduces to **44**. This works for any node in our heap except the head node (because the head node has no children).
+For each node, n, you can find its parent with the equation `(n-1)/2`. Remember in Ruby that dividing an integer with an integer will return an integer. For another language that will return a float, the equation would need to include a floor, like so: `((n-1)/2).floor`. Using this equation, **node 7's** parent is `(7-1)/2`, which reduces to **3**. **Node 88's** parent is `(88-1)/2`, which reduces to **44**. This works for any node in our heap except the head node (because the head node has no parent).

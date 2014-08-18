@@ -22,7 +22,7 @@ def pre_order(node)
 end
 ```
 
-The pre-order printing method is the same as the in-order except the puts statement is the first line in the method, before the children are visited.
+The pre-order printing method is the same as the in-order except the puts statement is the first line in the method, before the children are visited. Also note that the pre-order solution is the same thing as a depth first search of the tree. Look back to the Depth First Search Recursive Solution to see what I'm talking about!
 
 Post-Order:
 ```ruby
