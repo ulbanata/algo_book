@@ -1,6 +1,6 @@
 # Arrays
 
-More than likely, arrays were the first data structure you were introduced to. Arrays are the workhorse of the computing world. Let's look at how they work in Ruby:
+More than likely, arrays were the first data structure you were introduced to. <!-- Remind that they are build-in in Ruby --> Arrays are the workhorse of the computing world. Let's look at how they work in Ruby:
 
 ```ruby
 arr = []
@@ -16,7 +16,7 @@ They can hold symbols `:hello`, strings `"test"`, hashes `{}`, integers `3`, flo
 
 But how does it work behind the scenes? First, let's think about how memory works. We can picture our memory as a big, empty lego sheet. Whenever we store a data type or a data structure, lego blocks appear on our lego sheet to store that data. Let's put a string on our lego memory sheet. This block (Need visuals@!!!!!)
 
-## Array Overview
+## Array Overview <!-- Review? -->
 
 Like: Lego bricks on a lego board. Adding items to the array is like adding a brick to the board. All of the bricks have to be touching each other in a line.
 

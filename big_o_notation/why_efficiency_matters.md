@@ -3,6 +3,7 @@
 So with all of the talk about different Big Os, why does any of it matter? Aren't computers getting faster and faster? Yes, they are, but they're also able to store more and more data! And as your pc gets faster, people will want it to process more data. So what do the numbers look like? Let's take a look:
 
 <table>
+<caption>Table 3</caption>
 <tr>
 <th>n</th>
 <th>O(log(n))</th>
@@ -66,6 +67,7 @@ What we're looking at above is a table that shows the number of calculations tha
 Wow, it looks like O(n<sup>2</sup>) takes a lot of time to run that algorithm! But how long does it really take? Let's use some time to find out. We'll say that each calculation takes 1 millisecond (1 ms) to run. Plugging that into our table results in the following amounts of time to finish each algorithm. Notice the units that are associated with each cell!
 
 <table>
+<caption>Table 4</caption>
 <tr>
 <th>n</th>
 <th>O(log(n))</th>
@@ -128,4 +130,4 @@ Wow, look at the differences here. For 1 million entries, we can have an algorit
 
 (For a little more context, 1,000,000 entries being ran through a factorial algorithm will have a run time that is longer than the expected lifespan of the universe)
 
-**NOTE** The times above are completely arbitrary to show why efficiency matters. Most calculations will not take exactly 1 millisecond to run and can fluctuate. Don't use the above as the absolute truth on runtimes! It is just a demonstration.
+**NOTE:** The times above are completely arbitrary to show why efficiency matters. Most calculations will not take exactly 1 millisecond to run and can fluctuate. Don't use the above as the absolute truth on runtimes! It is just a demonstration.
