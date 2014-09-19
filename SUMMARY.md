@@ -1,5 +1,6 @@
 # Summary
 
+* [Introduction](README.md)
 * [To-Do](to-do/README.md)
 * [Problem Solving](problem_solving/README.md)
 * [What happens when you run code?](what_happens_when_you_run_code/README.md)
@@ -73,6 +74,8 @@
            * [Pre-Order](tree_algorithms/pre-order.md)
            * [In-Order](tree_algorithms/in-order.md)
            * [Post-Order](tree_algorithms/post-order.md)
+   * [Balanced Binary Search Trees](tree_algorithms/balanced_binary_search_trees.md)
+       * [BBST Solution](tree_algorithms/bbst_solution.md)
    * [Priority Queues](tree_algorithms/priority_queue.md)
        * [Priority Queue Solution](tree_algorithms/priority_queue_solution.md)
        * [Heaps](tree_algorithms/heaps.md)
@@ -81,8 +84,6 @@
    * [Traversing Graphs](graph_algorithms/traversing_graphs.md)
    * [Dijkstra's Algorithm](graph_algorithms/dijkstras_algorithm.md)
    * [Minimum Spanning Tree](graph_algorithms/minimum_spanning_tree.md)
-* [String Algorithms](string_algorithms/README.md)
-   * [TF-IDF](string_algorithms/tf-idf.md)
 * [Other Algorithms](other_algorithms/README.md)
    * [Neural Networks](other_algorithms/neural_network.md)
    * [Genetic Algorithms](other_algorithms/genetic_algorithms.md)

@@ -104,6 +104,74 @@ class LinkedList
 end
 ```
 
+The first thing to notice in the above code is the existence of two different classes. The first is the Node class, which, as we saw above, is the basic building block of the Linked List. Let's analyze the node:
+
+```ruby
+class Node
+  attr_reader :value
+  attr_accessor :next
+
+  def initialize(value)
+    @value = value
+    @next = nil
+  end
+end
+```
+
+The node class holds the value assigned to the node with the `@value` variable and contains the pointer to the next node in the linked list with the `@next` variable. The `@next` has an attr\_accessor because we want to be able to change which node comes next at any time. The `@value` only has an attr\_reader because once it is set, we don't want to change it.
+
+```ruby
+class LinkedList
+  def initialize
+    @head = nil
+    @tail = nil
+  end
+```
+
+The LinkedList class only has two variables it needs to track, the `head` and the `tail` nodes. These are the only nodes that have to be tracked because the nodes themselves hold the rest of the structure. You can picture the linked list like a chain necklace. When you pick up the necklace, you only need to hold either end. The chains are connected to each other, so the necklace won't fall apart.
+
+```ruby
+  def add_head_node(value)
+    new_node = Node.new(value)
+    unless @head
+      @head = @tail = new_node
+    else
+      new_node.next = @head
+      @head = new_node
+    end
+    value
+  end
+```
+
+To add something to the front of the list, we'll use the `add_head_node` method. This takes a value to add to the linked list and creates a new node with that value. If there is no node in the linked list (which would result in `@head` being nil), then we set the `@head` and `@tail` as the newly created node. Otherwise, we connect the new node to the old head node (using `new_node.next`) and set `@head` as the new node. Finally, we return the value.
+
+```ruby
+  def add_tail_node(value)
+    new_node = Node.new(value)
+    unless @head
+      @head = @tail = new_node
+    else
+      @tail.next = new_node
+      @tail = new_node
+    end
+    value
+  end
+```
+
+To add something to the back of the list, we'll use the `add_tail_node` method. This method also takes a value and creates a node with it. Just like in the `add_head_node` method, it checks to see if there is a node in the linked list. If not, it adds the newly created node as both the `@head` and `@tail`. Otherwise, it sets the old tail's next node as the new node and sets `@tail` as the new node.
+
+```ruby
+  def remove_head_node
+    return nil unless @head
+    sol = @head
+    @tail = nil if @tail == @head
+    @head = @head.next
+    sol.value
+  end
+```
+
+<!--- To remove the first node, <!--- More here! --->
+
 # Doubly Linked Lists
 
 The linked list we looked at above is a **Singly Linked List**. Nodes only connect to the item that follows it. In a **Doubly Linked List**, each node has two pointers or connections. One connection is to the node that follows it. The other connection is to the node that precedes it.

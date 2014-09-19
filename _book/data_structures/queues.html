@@ -1,0 +1,2049 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Queues | Algorithms for Web Devs</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.0.3">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    <link rel="next" href="../data_structures/hashes.html" />
+    
+    
+    <link rel="prev" href="../data_structures/stacks.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../gitbook/style.css">
+
+
+        
+    <div class="book"  data-level="5.4" data-basepath=".." data-revision="1410811025126">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="to-do/README.html">
+            
+                
+                    <a href="../to-do/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         To-Do
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="problem_solving/README.html">
+            
+                
+                    <a href="../problem_solving/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         Problem Solving
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="what_happens_when_you_run_code/README.html">
+            
+                
+                    <a href="../what_happens_when_you_run_code/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         What happens when you run code?
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4" data-path="big_o_notation/README.html">
+            
+                
+                    <a href="../big_o_notation/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                         Big O Notation
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="4.1" data-path="big_o_notation/why_efficiency_matters.html">
+            
+                
+                    <a href="../big_o_notation/why_efficiency_matters.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                         Why Efficiency Matters
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5" data-path="data_structures/README.html">
+            
+                
+                    <a href="../data_structures/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                         Data Structures
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="5.1" data-path="data_structures/arrays.html">
+            
+                
+                    <a href="../data_structures/arrays.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                         Arrays
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.2" data-path="data_structures/linked_lists.html">
+            
+                
+                    <a href="../data_structures/linked_lists.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                         Linked Lists
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.3" data-path="data_structures/stacks.html">
+            
+                
+                    <a href="../data_structures/stacks.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                         Stacks
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="5.4" data-path="data_structures/queues.html">
+            
+                
+                    <a href="../data_structures/queues.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                         Queues
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.5" data-path="data_structures/hashes.html">
+            
+                
+                    <a href="../data_structures/hashes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                         Hashes
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="5.5.1" data-path="data_structures/the_hash_method.html">
+            
+                
+                    <a href="../data_structures/the_hash_method.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.1.</b>
+                        
+                         The Hash Method
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.5.2" data-path="data_structures/building_out_a_hash.html">
+            
+                
+                    <a href="../data_structures/building_out_a_hash.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.2.</b>
+                        
+                         Building out a Hash
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.5.3" data-path="data_structures/hash_collisions.html">
+            
+                
+                    <a href="../data_structures/hash_collisions.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.3.</b>
+                        
+                         Hash Collisions
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.5.4" data-path="data_structures/hash_collisions_part_ii.html">
+            
+                
+                    <a href="../data_structures/hash_collisions_part_ii.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.4.</b>
+                        
+                         Hash Collisions Part II
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.5.5" data-path="data_structures/scaling_the_hash.html">
+            
+                
+                    <a href="../data_structures/scaling_the_hash.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.5.</b>
+                        
+                         Scaling the Hash
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.6" data-path="data_structures/sets.html">
+            
+                
+                    <a href="../data_structures/sets.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                         Sets
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.7" data-path="data_structures/trees.html">
+            
+                
+                    <a href="../data_structures/trees.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                         Trees
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="5.7.1" data-path="data_structures/tree_vocabulary.html">
+            
+                
+                    <a href="../data_structures/tree_vocabulary.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.1.</b>
+                        
+                         Tree Terminology
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.7.2" data-path="data_structures/building_a_tree_-_the_node.html">
+            
+                
+                    <a href="../data_structures/building_a_tree_-_the_node.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.2.</b>
+                        
+                         Building a Tree - The Node
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.7.3" data-path="data_structures/building_a_tree_-_the_tree.html">
+            
+                
+                    <a href="../data_structures/building_a_tree_-_the_tree.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.3.</b>
+                        
+                         Building a Tree - The Tree
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.8" data-path="data_structures/graphs.html">
+            
+                
+                    <a href="../data_structures/graphs.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                         Graphs
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="5.8.1" data-path="data_structures/graphs_-_trees_bigger_brother.html">
+            
+                
+                    <a href="../data_structures/graphs_-_trees_bigger_brother.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.1.</b>
+                        
+                         Graphs - Trees&#39; Bigger Brother
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.8.2" data-path="data_structures/building_a_graph_-_the_node.html">
+            
+                
+                    <a href="../data_structures/building_a_graph_-_the_node.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.2.</b>
+                        
+                         Building a Graph - The Node
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.8.3" data-path="data_structures/building_a_graph_-_the_graph.html">
+            
+                
+                    <a href="../data_structures/building_a_graph_-_the_graph.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.3.</b>
+                        
+                         Building a Graph - The Graph
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.9" data-path="data_structures/review.html">
+            
+                
+                    <a href="../data_structures/review.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.9.</b>
+                        
+                         Data Structure Review
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6" data-path="recursion/README.html">
+            
+                
+                    <a href="../recursion/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                         Recursion
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="6.1" data-path="recursion/what_is_recursion.html">
+            
+                
+                    <a href="../recursion/what_is_recursion.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                         What is Recursion?
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6.2" data-path="recursion/another_recursion_example.html">
+            
+                
+                    <a href="../recursion/another_recursion_example.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                         Another Recursion Example
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6.3" data-path="recursion/fizzbuzz_recursion.html">
+            
+                
+                    <a href="../recursion/fizzbuzz_recursion.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                         FizzBuzz Recursion
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="6.3.1" data-path="recursion/fizzbuzz_recursive_solution.html">
+            
+                
+                    <a href="../recursion/fizzbuzz_recursive_solution.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.1.</b>
+                        
+                         FizzBuzz Recursive Solution
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6.4" data-path="recursion/how_to_think_recursively.html">
+            
+                
+                    <a href="../recursion/how_to_think_recursively.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                         Stack Overflow?
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6.5" data-path="recursion/recursion_isnt_always_the_answer.html">
+            
+                
+                    <a href="../recursion/recursion_isnt_always_the_answer.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                         Recursion isn&#39;t always the answer!
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="6.5.1" data-path="recursion/the_fibonacci_sequence.html">
+            
+                
+                    <a href="../recursion/the_fibonacci_sequence.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.1.</b>
+                        
+                         The Fibonacci Sequence and Recursion
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6.5.2" data-path="recursion/recursion_isnt_always_the_answer_part_ii.html">
+            
+                
+                    <a href="../recursion/recursion_isnt_always_the_answer_part_ii.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.2.</b>
+                        
+                         Stack Level Too Deep!
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6.6" data-path="recursion/tail_call_optimization.html">
+            
+                
+                    <a href="../recursion/tail_call_optimization.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                         Tail Call Optimization
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="7" data-path="recursion/caching.html">
+            
+                
+                    <a href="../recursion/caching.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                         Caching
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="7.1" data-path="recursion/recursive_fibonacci_caching.html">
+            
+                
+                    <a href="../recursion/recursive_fibonacci_caching.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                         Recursive Fibonacci Caching Challenge
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="7.2" data-path="recursion/recursive_fib_caching_solution.html">
+            
+                
+                    <a href="../recursion/recursive_fib_caching_solution.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                         Recursive Fibonacci Caching Solution
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8" data-path="array_algorithms/README.html">
+            
+                
+                    <a href="../array_algorithms/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                         Array Algorithms
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="8.1" data-path="sorting_algorithms/README.html">
+            
+                
+                    <a href="../sorting_algorithms/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                         Sorting Algorithms
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="8.1.1" data-path="sorting_algorithms/selection_sort.html">
+            
+                
+                    <a href="../sorting_algorithms/selection_sort.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.1.</b>
+                        
+                         Selection Sort
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="8.1.1.1" data-path="sorting_algorithms/selection_sort_solution.html">
+            
+                
+                    <a href="../sorting_algorithms/selection_sort_solution.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.1.1.</b>
+                        
+                         Selection Sort Solution
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8.1.2" data-path="sorting_algorithms/insertion_sort.html">
+            
+                
+                    <a href="../sorting_algorithms/insertion_sort.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.2.</b>
+                        
+                         Insertion Sort
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="8.1.2.1" data-path="sorting_algorithms/insertion_sort_solution.html">
+            
+                
+                    <a href="../sorting_algorithms/insertion_sort_solution.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.2.1.</b>
+                        
+                         Insertion Sort Solution
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8.1.3" data-path="sorting_algorithms/bubble_sort.html">
+            
+                
+                    <a href="../sorting_algorithms/bubble_sort.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.3.</b>
+                        
+                         Bubble Sort
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="8.1.3.1" data-path="sorting_algorithms/bubble_sort_solution.html">
+            
+                
+                    <a href="../sorting_algorithms/bubble_sort_solution.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.3.1.</b>
+                        
+                         Bubble Sort Solution
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8.1.4" data-path="sorting_algorithms/merge_sort.html">
+            
+                
+                    <a href="../sorting_algorithms/merge_sort.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.4.</b>
+                        
+                         Merge Sort
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="8.1.4.1" data-path="sorting_algorithms/the_merge_method.html">
+            
+                
+                    <a href="../sorting_algorithms/the_merge_method.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.4.1.</b>
+                        
+                         The Merge Method
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8.1.4.2" data-path="sorting_algorithms/merge_sort_solution.html">
+            
+                
+                    <a href="../sorting_algorithms/merge_sort_solution.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.4.2.</b>
+                        
+                         Merge Sort Solution
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8.1.5" data-path="sorting_algorithms/quick_sort.html">
+            
+                
+                    <a href="../sorting_algorithms/quick_sort.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.5.</b>
+                        
+                         Quick Sort
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="8.1.5.1" data-path="sorting_algorithms/quick_sort_solution.html">
+            
+                
+                    <a href="../sorting_algorithms/quick_sort_solution.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.5.1.</b>
+                        
+                         Quick Sort Solution
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8.1.5.2" data-path="sorting_algorithms/random_pivot_point.html">
+            
+                
+                    <a href="../sorting_algorithms/random_pivot_point.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.5.2.</b>
+                        
+                         Random Pivot Point
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8.1.6" data-path="sorting_algorithms/radix_sort.html">
+            
+                
+                    <a href="../sorting_algorithms/radix_sort.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.6.</b>
+                        
+                         Radix Sort
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="8.1.6.1" data-path="sorting_algorithms/radix_sort_solution.html">
+            
+                
+                    <a href="../sorting_algorithms/radix_sort_solution.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.6.1.</b>
+                        
+                         Radix Sort Solution
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8.2" data-path="array_algorithms/binary_search.html">
+            
+                
+                    <a href="../array_algorithms/binary_search.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                         Binary Search
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="8.2.1" data-path="array_algorithms/binary_search_solution.html">
+            
+                
+                    <a href="../array_algorithms/binary_search_solution.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.1.</b>
+                        
+                         Binary Search Solution
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9" data-path="tree_algorithms/README.html">
+            
+                
+                    <a href="../tree_algorithms/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                         Tree Algorithms
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="9.1" data-path="tree_algorithms/traversing_a_tree.html">
+            
+                
+                    <a href="../tree_algorithms/traversing_a_tree.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                         Traversing a Tree
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="9.1.1" data-path="tree_algorithms/depth_first_search.html">
+            
+                
+                    <a href="../tree_algorithms/depth_first_search.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.1.</b>
+                        
+                         Depth First Search
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="9.1.1.1" data-path="tree_algorithms/recursive_solution.html">
+            
+                
+                    <a href="../tree_algorithms/recursive_solution.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.1.1.</b>
+                        
+                         DFS Recursive Solution
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.1.1.2" data-path="tree_algorithms/dfs_iterative_solution.html">
+            
+                
+                    <a href="../tree_algorithms/dfs_iterative_solution.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.1.2.</b>
+                        
+                         DFS Iterative Solution
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.1.2" data-path="tree_algorithms/breadth_first_search.html">
+            
+                
+                    <a href="../tree_algorithms/breadth_first_search.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.2.</b>
+                        
+                         Breadth First Search
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="9.1.2.1" data-path="tree_algorithms/bfs_recursive_solution.html">
+            
+                
+                    <a href="../tree_algorithms/bfs_recursive_solution.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.2.1.</b>
+                        
+                         BFS Recursive Solution
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.1.2.2" data-path="tree_algorithms/bfs_iterative_solution.html">
+            
+                
+                    <a href="../tree_algorithms/bfs_iterative_solution.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.2.2.</b>
+                        
+                         BFS Iterative Solution
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.2" data-path="tree_algorithms/binary_search_trees.html">
+            
+                
+                    <a href="../tree_algorithms/binary_search_trees.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                         Binary Search Trees
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="9.2.1" data-path="tree_algorithms/bst_solution.html">
+            
+                
+                    <a href="../tree_algorithms/bst_solution.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.1.</b>
+                        
+                         BST Solution
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.3" data-path="tree_algorithms/printing_binary_trees.html">
+            
+                
+                    <a href="../tree_algorithms/printing_binary_trees.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                         Printing Binary Trees
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="9.3.1" data-path="tree_algorithms/recursive_solutions.html">
+            
+                
+                    <a href="../tree_algorithms/recursive_solutions.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.1.</b>
+                        
+                         Recursive Solutions
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.3.2" data-path="tree_algorithms/iterative_solutions.html">
+            
+                
+                    <a href="../tree_algorithms/iterative_solutions.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.2.</b>
+                        
+                         Iterative Solutions
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="9.3.2.1" data-path="tree_algorithms/pre-order.html">
+            
+                
+                    <a href="../tree_algorithms/pre-order.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.2.1.</b>
+                        
+                         Pre-Order
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.3.2.2" data-path="tree_algorithms/in-order.html">
+            
+                
+                    <a href="../tree_algorithms/in-order.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.2.2.</b>
+                        
+                         In-Order
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.3.2.3" data-path="tree_algorithms/post-order.html">
+            
+                
+                    <a href="../tree_algorithms/post-order.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.2.3.</b>
+                        
+                         Post-Order
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.4" data-path="tree_algorithms/balanced_binary_search_trees.html">
+            
+                
+                    <a href="../tree_algorithms/balanced_binary_search_trees.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                         Balanced Binary Search Trees
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="9.4.1" data-path="tree_algorithms/bbst_solution.html">
+            
+                
+                    <a href="../tree_algorithms/bbst_solution.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.1.</b>
+                        
+                         BBST Solution
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.5" data-path="tree_algorithms/priority_queue.html">
+            
+                
+                    <a href="../tree_algorithms/priority_queue.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.5.</b>
+                        
+                         Priority Queues
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="9.5.1" data-path="tree_algorithms/priority_queue_solution.html">
+            
+                
+                    <a href="../tree_algorithms/priority_queue_solution.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.5.1.</b>
+                        
+                         Priority Queue Solution
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.5.2" data-path="tree_algorithms/heaps.html">
+            
+                
+                    <a href="../tree_algorithms/heaps.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.5.2.</b>
+                        
+                         Heaps
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="9.5.2.1" data-path="tree_algorithms/heap_solution.html">
+            
+                
+                    <a href="../tree_algorithms/heap_solution.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.5.2.1.</b>
+                        
+                         Heap Solution
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="10" data-path="graph_algorithms/README.html">
+            
+                
+                    <a href="../graph_algorithms/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                         Graph Algorithms
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="10.1" data-path="graph_algorithms/traversing_graphs.html">
+            
+                
+                    <a href="../graph_algorithms/traversing_graphs.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.1.</b>
+                        
+                         Traversing Graphs
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="10.2" data-path="graph_algorithms/dijkstras_algorithm.html">
+            
+                
+                    <a href="../graph_algorithms/dijkstras_algorithm.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.2.</b>
+                        
+                         Dijkstra&#39;s Algorithm
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="10.3" data-path="graph_algorithms/minimum_spanning_tree.html">
+            
+                
+                    <a href="../graph_algorithms/minimum_spanning_tree.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.3.</b>
+                        
+                         Minimum Spanning Tree
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="11" data-path="string_algorithms/README.html">
+            
+                
+                    <a href="../string_algorithms/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                         String Algorithms
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="11.1" data-path="string_algorithms/tf-idf.html">
+            
+                
+                    <a href="../string_algorithms/tf-idf.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.</b>
+                        
+                         TF-IDF
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="12" data-path="other_algorithms/README.html">
+            
+                
+                    <a href="../other_algorithms/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                         Other Algorithms
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="12.1" data-path="other_algorithms/neural_network.html">
+            
+                
+                    <a href="../other_algorithms/neural_network.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.1.</b>
+                        
+                         Neural Networks
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="12.2" data-path="other_algorithms/genetic_algorithms.html">
+            
+                
+                    <a href="../other_algorithms/genetic_algorithms.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.2.</b>
+                        
+                         Genetic Algorithms
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="12.3" data-path="other_algorithms/cosine_similarity.html">
+            
+                
+                    <a href="../other_algorithms/cosine_similarity.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.3.</b>
+                        
+                         Cosine Similarity
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="13" data-path="interviewing/README.html">
+            
+                
+                    <a href="../interviewing/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                         Interviewing
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="13.1" data-path="interviewing/bitly_clone.html">
+            
+                
+                    <a href="../interviewing/bitly_clone.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.1.</b>
+                        
+                         bit.ly clone
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="14" data-path="languages_overview/README.html">
+            
+                
+                    <a href="../languages_overview/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                         Languages Overview
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="15" data-path="framework_resources/README.html">
+            
+                
+                    <a href="../framework_resources/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.</b>
+                        
+                         Framework Resources
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="16" data-path="p_vs_np/README.html">
+            
+                
+                    <a href="../p_vs_np/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.</b>
+                        
+                         P = NP?
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="17" data-path="p_vs_np/glossary.html">
+            
+                
+                    <a href="../p_vs_np/glossary.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.</b>
+                        
+                         Glossary
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="18" data-path="learning_resources/README.html">
+            
+                
+                    <a href="../learning_resources/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>18.</b>
+                        
+                         Learning Resources
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Algorithms for Web Devs</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_1139">
+                    
+                        <h1 id="queues">Queues</h1>
+<p>Queues are like lines at an amusement park. As people get in line, they get in the back of it. Whenever someone gets to get on the ride, they leave the line from the front of it. The queue is an example of First-in, First-out data structure, where the first item that was added to the queue is the first item that is removed. <!-- This is in contrast to the Last In First Out of Stacks (always relate it back to what they learned earlier) --></p>
+<p>While queues can be implemented using arrays, it is not the most efficient way. Let&#39;s look at what&#39;s happening with a queue to understand where the inefficiencies lie.</p>
+<p>We&#39;ll start with a queue that has 36 as the first element. 54 is being added to the queue.</p>
+<p><img src="http://i.imgur.com/MWq6u6b.png" alt="Queue"></p>
+<p>The queue now has two elements, 36 and 54. 36 is the first element. 15 is being added to the queue, and will be added to the end.</p>
+<p><img src="http://i.imgur.com/G2eeS0i.png" alt="Queue"></p>
+<p>The queue now has three elements, 36, 54 and 15. 36 is the first element and 15 is the last element. 47 is being added to the queue and will be added to the end.</p>
+<p><img src="http://i.imgur.com/VxFnjuK.png" alt="Queue"></p>
+<p>Our queue now has 4 elements, 36, 54, 15, and 47. 36 is the at the beginning of our queue and 47 is at the end. When we remove an item with queue.shift, we remove 36 because it is at the beginning. This is the opposite of removing items from the stack.</p>
+<p><img src="http://i.imgur.com/kxo1sdH.png" alt="Queue"></p>
+<p>The removal process can be repeated to remove the remaining elements from our queue.</p>
+<p><img src="http://i.imgur.com/Y5jO22Q.png" alt="Queue">
+<img src="http://i.imgur.com/pzlNM95.png" alt="Queue">
+<img src="http://i.imgur.com/al7TAfr.png" alt="Queue"></p>
+<p>Now that we&#39;ve gone through how the queue works, let&#39;s take a minute to determine why we wouldn&#39;t want to use an array to store our queue elements. It comes down to the commands that are being used. We want to be able to both add and remove items in <code>O(1)</code> time, but can we do that using an array in our queue? We already know that the <code>array.push</code> method takes <code>O(1)</code> time. What about <code>array.shift</code>? If you remember back to the array section, <code>array.shift</code> runs in <code>O(n)</code> time! The larger our queue grows, the slower it will get if we use arrays to store our elements. Is all lost? Not necessarily! We&#39;re going to build our own data structure from scratch!  Let&#39;s take a look at the code we can use to build it.</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span></span>
+  <span class="hljs-keyword">attr_accessor</span> <span class="hljs-symbol">:child</span>
+  <span class="hljs-keyword">attr_reader</span> <span class="hljs-symbol">:value</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize(value)
+    <span class="hljs-variable">@value</span> = value
+    <span class="hljs-variable">@child</span> = <span class="hljs-keyword">nil</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Queue</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize()
+    <span class="hljs-variable">@start</span> = <span class="hljs-keyword">nil</span>
+    <span class="hljs-variable">@end</span> = <span class="hljs-keyword">nil</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>push(value)
+    node = <span class="hljs-constant">Node</span>.new(value)
+    <span class="hljs-keyword">if</span> <span class="hljs-variable">@end</span>
+      <span class="hljs-variable">@end</span>.child = node
+      <span class="hljs-variable">@end</span> = node
+    <span class="hljs-keyword">else</span>
+      <span class="hljs-variable">@start</span> = node
+      <span class="hljs-variable">@end</span> = node
+    <span class="hljs-keyword">end</span>
+    value
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>shift
+    <span class="hljs-keyword">if</span> <span class="hljs-variable">@start</span>
+      value = <span class="hljs-variable">@start</span>.value
+      <span class="hljs-variable">@end</span> = <span class="hljs-keyword">nil</span> <span class="hljs-keyword">if</span> <span class="hljs-variable">@start</span> == <span class="hljs-variable">@end</span>
+      <span class="hljs-variable">@start</span> = <span class="hljs-variable">@start</span>.child
+    <span class="hljs-keyword">else</span>
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">nil</span>
+    <span class="hljs-keyword">end</span>
+    value
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>peek
+    <span class="hljs-variable">@start</span> ? <span class="hljs-variable">@start</span>.value <span class="hljs-symbol">:</span> <span class="hljs-keyword">nil</span>
+  <span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>There&#39;s a lot going on here! Time to break it down. <!-- I like this! You should do this for more examples --></p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span></span>
+  <span class="hljs-keyword">attr_accessor</span> <span class="hljs-symbol">:child</span>
+  <span class="hljs-keyword">attr_reader</span> <span class="hljs-symbol">:value</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize(value)
+    <span class="hljs-variable">@value</span> = value
+    <span class="hljs-variable">@child</span> = <span class="hljs-keyword">nil</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>The node class is the basic building block of our queue. It only has two instance variables, a <code>value</code> and a <code>child</code>. The <code>value</code> holds whatever we are storing in the queue, such as a number, an instance of a class, or a hash. The <code>child</code> is the connector that attaches one node to another. Because we only have the <code>child</code> variable, we can only from the front to the end of the queue. However, there isn&#39;t a case for going back the other direction, so a <code>parent</code> variable is not needed. The node has to have a <code>value</code> to be initialized, but the <code>child</code> can be set at any time via the <code>attr_accessor</code>. The <code>value</code> only has an <code>attr_reader</code>, so it cannot be changed by anything outside of the node class. This is to protect the data in the queue.</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Queue</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize()
+    <span class="hljs-variable">@start</span> = <span class="hljs-keyword">nil</span>
+    <span class="hljs-variable">@end</span> = <span class="hljs-keyword">nil</span>
+  <span class="hljs-keyword">end</span>
+</code></pre>
+<p>Here is the beginnings of our queue class. We only have two instance variables, the <code>start</code> and the <code>end</code> which point to the beginning and end of our queue, respectively. That is the only thing we need to track within our queue. We need to be able to remove object from the front, using the <code>start</code> variable, and we need to add items to the end, using the <code>end</code> variable.</p>
+<pre><code class="lang-ruby">  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>push(value)
+    node = <span class="hljs-constant">Node</span>.new(value)
+    <span class="hljs-keyword">if</span> <span class="hljs-variable">@end</span>
+      <span class="hljs-variable">@end</span>.child = node
+      <span class="hljs-variable">@end</span> = node
+    <span class="hljs-keyword">else</span>
+      <span class="hljs-variable">@start</span> = node
+      <span class="hljs-variable">@end</span> = node
+    <span class="hljs-keyword">end</span>
+    value
+  <span class="hljs-keyword">end</span>
+</code></pre>
+<p>To add items to our queue, we will build our own push method. It takes a <code>value</code> as a parameter and uses the value to create a new node. The <code>end</code> instance variable is used to see how to add the node to the queue. If there is a node in the queue, then <code>end</code> will equal <code>true</code>. In this case, the current end node has its child set to the node being added, and the <code>end</code> variable is set to the new node.</p>
+<p>If there are no nodes in the queue, then the if-else statement will run the code in the else block. It will set both the <code>start</code> and the <code>end</code> variables to the node, because it is now the only node in the queue.</p>
+<p>Finally, the push method returns the value.</p>
+<pre><code class="lang-ruby">  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>shift
+    <span class="hljs-keyword">if</span> <span class="hljs-variable">@start</span>
+      value = <span class="hljs-variable">@start</span>.value
+      <span class="hljs-variable">@end</span> = <span class="hljs-keyword">nil</span> <span class="hljs-keyword">if</span> <span class="hljs-variable">@start</span> == <span class="hljs-variable">@end</span>
+      <span class="hljs-variable">@start</span> = <span class="hljs-variable">@start</span>.child
+    <span class="hljs-keyword">else</span>
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">nil</span>
+    <span class="hljs-keyword">end</span>
+    value
+  <span class="hljs-keyword">end</span>
+</code></pre>
+<p>A shift method is created to remove individual items from the queue. The flow of the shift method follows the basic flow of the push method. If there is a <code>start</code> node, then you save the value to a <code>value</code> variable. Then, you replace the <code>start</code> node with its child. In order to make sure that you update the <code>end</code> variable if you are removing the last item in the queue (in the case above, it was when we used queue.shift on 47). This sets the <code>end</code> to nil, because there are no more elements in our queue. Finally, the method returns the <code>value</code>.</p>
+<p>If <code>start</code> is nil (there are no elements in the queue), then it returns <code>nil</code>.</p>
+<pre><code class="lang-ruby">  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>peek
+    <span class="hljs-variable">@start</span> ? <span class="hljs-variable">@start</span>.value <span class="hljs-symbol">:</span> <span class="hljs-keyword">nil</span>
+  <span class="hljs-keyword">end</span>
+</code></pre>
+<p>  The peek method</p>
+<h2 id="queue-overview">Queue Overview</h2>
+<p>Like: A line waiting to get on a ride. The first person in line is the one that gets to get on the ride first. New people that join the line join at the end of the line. Example of a First In, First Out (FIFO) Data Structure.</p>
+<p>Uses:</p>
+<ul>
+<li>Commands to be ran on a server</li>
+</ul>
+<p>Run Times:</p>
+<ul>
+<li>Adding an item: O(1)</li>
+<li>Removing an item: O(1)</li>
+<li>Viewing the next item to be removed: O(1)</li>
+</ul>
+<p>Best built using a linked list.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../data_structures/stacks.html" class="navigation navigation-prev " aria-label="Previous page: Stacks"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../data_structures/hashes.html" class="navigation navigation-next " aria-label="Next page: Hashes"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

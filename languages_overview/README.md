@@ -12,7 +12,7 @@ There are many, many, many programming languages in the world today, and they ar
 9. R
 10. Matlab
 
-The top 10 web languages are as follows:
+The top 10 web languages are:
 1. Java
 2. Python
 3. C#
@@ -24,7 +24,7 @@ The top 10 web languages are as follows:
 9. Scala
 10. Go
 
-Even with all these different choices, there are some common threads that most languages follow. They break down into several different
+Even with all these different choices, there are some common threads that most languages follow. They break down into several different categories that have their own characteristics. 
 
 ## Language Types
 

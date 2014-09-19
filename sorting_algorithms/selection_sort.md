@@ -1,5 +1,7 @@
 # Selection Sort
 
+### Stable and Adaptive - O(n<sup>2</sup>)
+
 Selection sort was one of the first sorting algorithms invented and it is the first sorting algorithm we teach at MakerSquare.
 
 ![Sorting Array](http://i.imgur.com/PIKGhFq.png)

@@ -36,9 +36,9 @@ class Stack
     @arr = []
   end
 
-  def push(element)
-    @arr.push(element)
-    element
+  def push(value)
+    @arr.push(value)
+    value
   end
 
   def pop
@@ -50,6 +50,8 @@ class Stack
   end
 end
 ```
+
+The code for the stack is relatively straightforward. When we initialize our stack, we create it with an internal array. When we want to push items into our stack, we `.push(value)` on the internal array. To remove the item from our stack with pop, we `.pop` from the internal array. To see the next item that will be removed from our stack on pop, we call peek. This calls `.last` on our internal array.
 
 ## Stack Overview
 

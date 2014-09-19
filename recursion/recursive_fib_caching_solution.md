@@ -19,8 +19,10 @@ The above is a solution to the Recursive Fibonacci Caching Challenge. It creates
 
 This line checks the cache and, if n is already in the cache, will return its result. This is the line that greatly speeds up our entire algorithm. If n isn't in the cache and isn't 1 or 2, then it will have to make the two recursive calls.
 
-`return 1 if n <= 2`
-`sol = self.num(n-1) + self.num(n-2)`
+```ruby
+return 1 if n <= 2
+sol = self.num(n-1) + self.num(n-2)
+```
 
 These two lines are doing the same thing as we had for our recursive fibonacci sequence earlier. Nothing has changed with them.
 

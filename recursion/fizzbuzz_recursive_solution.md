@@ -54,14 +54,35 @@ Using that information, here is a single method solution to fizzbuzz that counts
 def fizzbuzz(n)
   fizzbuzz(n - 1) if n > 1
 
-  if x % 15 == 0
-    puts fizzbuzz
-  elsif x % 3 == 0
-    puts fizz
-  elsif x % 5 == 0
-    puts buzz
+  if n % 15 == 0
+    puts 'fizzbuzz'
+  elsif n % 3 == 0
+    puts 'fizz'
+  elsif n % 5 == 0
+    puts 'buzz'
   else
-    puts x
+    puts n
   end
 end
 ```
+
+Another solution, if you really want to use two parameters, could looks something like this:
+
+```ruby
+def fizzbuzz(x, n=1)
+  return if n > x
+
+  if n % 15 == 0
+    puts 'fizzbuzz'
+  elsif n % 3 == 0
+    puts 'fizz'
+  elsif n % 5 == 0
+    puts 'buzz'
+  else
+    puts n
+  end
+
+  fizzbuzz(x, n+1)
+end
+```
+

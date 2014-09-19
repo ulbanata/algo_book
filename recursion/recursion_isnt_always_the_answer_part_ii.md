@@ -8,6 +8,4 @@ Because we live in a world of distributed software and the world wide web, the b
 
 So what's a programmer to do? As always, think about your code. What environments will it be ran in? What will it be used for? Can it potentially cause a stack overflow? How can you prevent this from happening?
 
-If the code has the potential to cause a stack overflow, then it is usually a good idea to code an iterative solution. You just learned how to convert iterative functions into recursive functions, now how do you convert recursive functions into iterative ones?
-
-EXAMPLE HERE>>>>>><<<<<<<<<
+If the code has the potential to cause a stack overflow, then it is usually a good idea to code an iterative solution.

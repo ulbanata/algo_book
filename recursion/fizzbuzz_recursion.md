@@ -4,8 +4,28 @@ The FizzBuzz problem is a coomon one in technical interviews. It tests the inter
 
 "Write a method that takes a number, n. The method will then print out all numbers from 1 to n. However, instead of printing a multiple of 3, the method will print fizz. Instead of a multiple of 5, the method will print buzz. If a number is both a multiple of 3 and 5, the method will print fizzbuzz."
 
-If 17 is passed into the method, it would print out this:
-`1 2 fizz 4 buzz 5 fizz 7 8 fizz buzz 11 fizz 13 14 fizzbuzz 16 17`
+If 18 is passed into the method, it would print out this:
+```
+1
+2
+fizz
+4
+buzz
+5
+fizz
+7
+8
+fizz
+buzz
+11
+fizz
+13
+14
+fizzbuzz
+16
+17
+fizz
+```
 
 An iterative solution could look something like this:
 

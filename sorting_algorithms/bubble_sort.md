@@ -1,37 +1,49 @@
 # Bubble Sort
 
+### Stable and Adaptive - O(n<sup>2</sup>)
+
 Bubble sort is another adaptive sorting algorithm that is an improvement on selection sort. Bubble sort starts at the end of the array and moves the smallest element into its correct location pass at a a time by swapping elements if they are smaller than the preceding element. The algorithm also keeps track of the last element it swapped to determine when it can skip that group of elements.
 
 ![Bubble Sort Part ](http://i.imgur.com/vEii5qt.png)
+
 The algorithm starts at the end of the array. It compares the last element and the next to last element and swaps them if the last element is less than the next to last element. Is 2 smaller than 1? It is not, so it checks the next two elements.
 
 ![Bubble Sort Part ](http://i.imgur.com/pFyU9Cd.png)
+
 Is 1 smaller than 4? It is, so their locations are swapped.
 
 ![Bubble Sort Part ](http://i.imgur.com/TTAX1Sn.png)
+
 Is 1 smaller than 5? It is, so their locations are swapped.
 
 ![Bubble Sort Part ](http://i.imgur.com/GG4m4ZY.png)
+
 Is 1 smaller than 3? It is, so their locations are swapped.
 
 ![Bubble Sort Part ](http://i.imgur.com/HNZNJa6.png)
+
 Is 1 smaller than 6? It is, so their locations are swapped.
 
 ![Bubble Sort Part ](http://i.imgur.com/U1fW2zQ.png)
+
 The algorithm has reached the beginning of the array. At this point in time, we know that the smallest element is in its correct location. The algorithm starts again from the last element and compares it to the next to last element.
 
 Is 2 less than 4? It is, so their locations are swapped.
 
 ![Bubble Sort Part ](http://i.imgur.com/jXslI9W.png)
+
 Is 2 less than 5? It is, so their locations are swapped.
 
 ![Bubble Sort Part ](http://i.imgur.com/Bdf6wkX.png)
+
 Is 2 less than 3? It is, so their locations are swapped.
 
 ![Bubble Sort Part ](http://i.imgur.com/LQcp0Ba.png)
+
 Is 2 less than 6? It is, so their locations are swapped.
 
 ![Bubble Sort Part ](http://i.imgur.com/GVD0z2h.png)
+
 The algorithm has reached the pointer that lets us know we have reached an element that has been sorted. We now know that 2 is in its correct spot in the array. The algorithm starts from the last elements and compares it to the next to last element.
 
 Is 4 less than 5? It is, so their locations are swapped.

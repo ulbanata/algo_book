@@ -1,5 +1,7 @@
 # Merge Sort
 
+### Stable and Non-adaptive - O(n*log(n))
+
 Merge sort is a very efficient sort that breaks down the problem to its smallest part before building it back up. The base version uses recursion in order to solve the sorting problem.
 
 Before we begin going through recursion, let's think about how we can break this problem up into smaller parts. How long does it take to sort an array with 8 elements? Currently, we have algorithms that sort in O(n<sup>2</sup>) time, so an 8 element array would take up to 64 operations to run. What if we split the array in half? How long does it take to sort a 4 element array? It takes 16 operations. That's 1/4 the time it takes to sort an 8 element array! If we have two 4 element arrays from our original 8 element array, then it takes 2 * 16 operations to sort the two arrays, or 1/2 the time to sort the 8 element array.
